@@ -1,0 +1,3681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Rohit Nayak — Software Engineer (2.5+ Yrs) & Data Science Specialist (4+ Yrs)</title>
+    <meta name="title" content="Rohit Nayak — Software Development Engineer & Data Science Specialist">
+    <meta name="description" content="Rohit Nayak - Data Science Specialist at HYI.AI (4+ Yrs Exp) & Full-Stack MERN/.NET Engineer (2.5+ Yrs Exp). National Hackathon Winner (Paranox 2.0), Springer Author (6 Citations), NIELIT & IndiaAI.">
+    <meta name="keywords" content="Rohit Nayak, Data Science Specialist, HYI.AI, BR TECHGEEKS, Webcreaters, NIELIT, MERN Stack, ASP.NET Core, YOLOv8, Diffusion Models, IndiaAI, NITI Aayog, PIET">
+    <meta name="author" content="Rohit Nayak">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chandansaroj.in/">
+    <meta property="og:title" content="Rohit Nayak - SDE & Data Science Specialist">
+    <meta property="og:description" content="Interactive Click-Based Portfolio: Software Engineering (2.5+ Yrs) & Data Science Specialist (4+ Yrs).">
+    <meta property="og:image" content="assets/img/chandan-saroj.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- EXACT SPENCER GABOR (spencergabor.work) DESIGN TOKENS --- */
+        :root {
+            --primary: #2b2b2b;          /* Gabor Charcoal Display */
+            --accent: #2563eb;           /* Interactive Accent */
+            --accent-soft: #eff6ff;
+            --accent-border: #e5e7eb;
+            --secondary: #cbcbcb;        /* Gabor Muted Display Gray */
+            
+            --bg-main: #ffffff;          /* Pure White Studio Canvas */
+            --bg-surface: #ffffff;       /* Borderless Card Surface */
+            --bg-subtle: #f4f4f5;        /* Soft Pill / Secondary Surface */
+            
+            --text-main: #2b2b2b;        /* Deep Charcoal */
+            --text-muted: #52525b;       /* Clean Body Gray */
+            --text-light: #a1a1aa;       /* Subtle Muted Gray */
+            
+            --border: rgba(0, 0, 0, 0.07); /* Borderless / Hairline only */
+            --border-strong: rgba(0, 0, 0, 0.12);
+            
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 20px 40px -12px rgba(0, 0, 0, 0.10);
+            --shadow-lg: 0 28px 60px -15px rgba(0, 0, 0, 0.14);
+            
+            --radius-sm: 14px;
+            --radius-md: 24px;
+            --radius-lg: 32px;
+            
+            --header-h: 64px;
+            --sidebar-expanded-w: 285px;
+            --sidebar-collapsed-w: 72px;
+            
+            --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+            --font-display: 'Antonio', Impact, sans-serif;
+            --font-code: 'Fira Code', monospace;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body[data-profession="datascience"] {
+            --accent: #6d28d9;
+            --accent-soft: #f3e8ff;
+        }
+
+        /* Spencer Gabor Bottom-Right Palette Themes */
+        body[data-palette="mint"] {
+            --bg-main: #f2fbf5;
+            --bg-subtle: #e1f5e8;
+        }
+        body[data-palette="butter"] {
+            --bg-main: #fffdf0;
+            --bg-subtle: #faf3ce;
+        }
+        body[data-palette="lavender"] {
+            --bg-main: #f8f5ff;
+            --bg-subtle: #ede5ff;
+        }
+        body[data-palette="coral"] {
+            --bg-main: #fff6f4;
+            --bg-subtle: #fde6e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: var(--font-main);
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.35s ease, color 0.25s ease;
+        }
+
+        /* --- DUAL PROFESSION VISIBILITY RULES --- */
+        body[data-profession="developer"] .ds-only { display: none !important; }
+        body[data-profession="datascience"] .dev-only { display: none !important; }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            line-height: 0.96;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+
+        /* --- GEMINI-STYLE APP SHELL (SIDEBAR PUSHES CONTENT HORIZONTALLY) --- */
+        .app-shell {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: var(--bg-main);
+        }
+
+        .app-sidebar {
+            width: var(--sidebar-expanded-w);
+            flex: 0 0 var(--sidebar-expanded-w);
+            height: 100vh;
+            background: #fafafa;
+            border-right: 1px solid var(--border);
+            z-index: 1200;
+            transition: width 0.32s cubic-bezier(0.16, 1, 0.3, 1), flex-basis 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.32s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        body.sidebar-collapsed .app-sidebar {
+            width: var(--sidebar-collapsed-w);
+            flex: 0 0 var(--sidebar-collapsed-w);
+        }
+
+        .sidebar-top-bar {
+            height: var(--header-h);
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .sidebar-trigger-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #e4e4e7;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .sidebar-trigger-btn:hover {
+            background: var(--text-main);
+            color: #fff;
+            transform: scale(1.06);
+        }
+
+        .sidebar-brand-text {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            transition: opacity 0.2s ease, width 0.2s ease;
+        }
+        body.sidebar-collapsed .sidebar-brand-text {
+            opacity: 0;
+            width: 0;
+            pointer-events: none;
+        }
+
+        /* --- RICH PROFILE PANEL AT TOP OF SIDEBAR --- */
+        .sidebar-profile-showcase {
+            margin: 10px 12px 6px;
+            padding: 12px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: var(--transition);
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .sidebar-photo-box {
+            width: 104px;
+            height: 104px;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            background: #f4f4f5;
+            margin-bottom: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .sidebar-photo-box img.profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .sidebar-profile-details {
+            width: 100%;
+            transition: opacity 0.2s ease;
+        }
+
+        .sidebar-profile-details h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: 0.01em;
+            margin-bottom: 2px;
+            color: var(--text-main);
+        }
+
+        .sidebar-role-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+            display: block;
+            line-height: 1.3;
+        }
+
+        .sidebar-mini-banner {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--bg-subtle);
+            text-align: left;
+        }
+
+        .sidebar-mini-banner img {
+            width: 100%;
+            height: 40px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .sidebar-mini-banner-foot {
+            padding: 5px 8px;
+            font-size: 0.65rem;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        body.sidebar-collapsed .sidebar-profile-showcase {
+            padding: 0;
+            margin: 10px auto 6px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        body.sidebar-collapsed .sidebar-photo-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+        body.sidebar-collapsed .sidebar-profile-details,
+        body.sidebar-collapsed #heroMessages {
+            display: none !important;
+        }
+
+        .sidebar-nav-list {
+            padding: 6px 12px;
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .sidebar-nav-btn {
+            width: 100%;
+            border: none;
+            background: transparent;
+            padding: 9px 12px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-family: var(--font-main);
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+            white-space: nowrap;
+        }
+        body.sidebar-collapsed .sidebar-nav-btn {
+            justify-content: center;
+            padding: 10px 0;
+            border-radius: 14px;
+        }
+
+        .sidebar-nav-btn .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            overflow: hidden;
+        }
+        .sidebar-nav-btn i {
+            width: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            flex-shrink: 0;
+        }
+        body.sidebar-collapsed .sidebar-nav-label,
+        body.sidebar-collapsed .sidebar-nav-btn .slide-num {
+            display: none;
+        }
+
+        .sidebar-nav-btn .slide-num {
+            font-size: 0.68rem;
+            font-family: var(--font-code);
+            font-weight: 700;
+            color: var(--text-muted);
+            background: #e4e4e7;
+            padding: 2px 7px;
+            border-radius: 999px;
+        }
+
+        .sidebar-nav-btn:hover {
+            background: #e4e4e7;
+            color: var(--text-main);
+        }
+        .sidebar-nav-btn.prev-context-nav {
+            background: #f4f4f5;
+            color: var(--text-main);
+        }
+        .sidebar-nav-btn.active {
+            background: var(--text-main);
+            color: #ffffff;
+        }
+        .sidebar-nav-btn.active i { color: #ffffff; }
+        .sidebar-nav-btn.active .slide-num {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        .sidebar-footer {
+            padding: 10px 12px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-shrink: 0;
+            background: #fafafa;
+        }
+        .sidebar-step-row {
+            display: flex;
+            gap: 8px;
+        }
+        .sidebar-step-btn {
+            flex: 1;
+            border: none;
+            background: #e4e4e7;
+            color: var(--text-main);
+            padding: 8px 10px;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .sidebar-step-btn:hover {
+            background: var(--text-main);
+            color: #fff;
+        }
+        .sidebar-stats-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            padding: 2px 4px;
+        }
+        .sidebar-resume-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.6rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
+
+        body.sidebar-collapsed .sidebar-footer {
+            align-items: center;
+            padding: 10px 6px;
+            gap: 8px;
+        }
+        body.sidebar-collapsed .sidebar-step-row {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            gap: 6px;
+        }
+        body.sidebar-collapsed .sidebar-step-btn {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            padding: 0;
+            border-radius: 50%;
+        }
+        body.sidebar-collapsed .sidebar-step-btn span,
+        body.sidebar-collapsed .sidebar-stats-row,
+        body.sidebar-collapsed .resume-btn-text {
+            display: none !important;
+        }
+        body.sidebar-collapsed .sidebar-resume-btn {
+            width: 40px !important;
+            height: 40px !important;
+            padding: 0 !important;
+            border-radius: 50% !important;
+        }
+
+
+
+        /* Rohit Nayak: personal profile photo upload */
+        .photo-upload-btn {
+            margin: 8px auto 2px;
+            border: 0;
+            border-radius: 999px;
+            padding: 8px 14px;
+            background: #2b2b2b;
+            color: #fff;
+            font: 700 0.72rem var(--font-main);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: var(--transition);
+        }
+        .photo-upload-btn:hover { background: var(--accent); transform: translateY(-2px); }
+        body.sidebar-collapsed .photo-upload-btn { display: none; }
+
+        /* --- MAIN WORKSPACE AREA --- */
+        .workspace-main {
+            flex: 1;
+            min-width: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--bg-main);
+            position: relative;
+        }
+
+        #header {
+            height: var(--header-h);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .mobile-Drawer-btn {
+            display: none;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.55rem;
+            letter-spacing: 0.01em;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        /* --- MINIMAL SOFT PILL PROFILE TOGGLE --- */
+        .minimal-mode-switch {
+            display: inline-flex;
+            align-items: center;
+            background: #e4e4e7;
+            border-radius: 999px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .mode-switch-btn {
+            border: none;
+            background: transparent;
+            color: #52525b;
+            font-family: var(--font-main);
+            font-size: 0.76rem;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .mode-switch-btn.active {
+            background: #2b2b2b;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Spencer Gabor Floating Corner Buttons (Top-Right Avatar + Bottom-Right Palette) */
+        .gabor-floating-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e4e4e7;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            border: 2px solid #e4e4e7;
+            transition: var(--transition);
+        }
+        .gabor-floating-avatar:hover {
+            transform: scale(1.08) rotate(6deg);
+        }
+        .gabor-floating-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gabor-floating-palette-wrap {
+            position: fixed;
+            bottom: 22px;
+            right: 24px;
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .gabor-palette-drawer {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            padding: 8px 12px;
+            border-radius: 999px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            opacity: 0;
+            transform: translateX(12px) scale(0.9);
+            pointer-events: none;
+            transition: var(--transition);
+        }
+        .gabor-floating-palette-wrap.open .gabor-palette-drawer {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            pointer-events: auto;
+        }
+        .gabor-palette-fab {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e4e4e7;
+            color: #18181b;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        .gabor-palette-fab:hover {
+            transform: scale(1.08);
+            background: #d4d4d8;
+        }
+        .palette-swatch {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.18s ease;
+        }
+        .palette-swatch:hover,
+        .palette-swatch.active {
+            transform: scale(1.22);
+        }
+
+        .weather-widget {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f4f4f5;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        .weather-location { font-weight: 800; color: var(--text-main); }
+        .weather-info { display: flex; align-items: center; gap: 8px; }
+
+        /* --- DIRECTIONAL 30% / 70% HORIZONTAL SPLIT STAGE --- */
+        .deck-viewport {
+            flex: 1;
+            width: 100%;
+            height: calc(100vh - var(--header-h));
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            overflow: hidden;
+            background: var(--bg-main);
+            position: relative;
+        }
+
+        .slide-panel {
+            display: none;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            opacity: 0;
+            flex: 0 0 0%;
+            width: 0%;
+            max-width: 0%;
+            padding: 0;
+            pointer-events: none;
+            container-type: inline-size;
+            position: relative;
+            will-change: width, flex-basis, opacity, transform;
+        }
+
+        .slide-panel.prev-slide {
+            display: block;
+            flex: 0 0 30%;
+            width: 30%;
+            max-width: 30%;
+            opacity: 0.92;
+            pointer-events: auto;
+            padding: 22px 18px 40px;
+            background: #fafafa;
+            z-index: 4;
+            cursor: pointer;
+        }
+        .slide-panel.prev-slide:hover {
+            opacity: 1;
+        }
+
+        .slide-panel.active-slide {
+            display: block;
+            flex: 1 1 70%;
+            width: 70%;
+            max-width: 70%;
+            opacity: 1;
+            pointer-events: auto;
+            padding: 32px 36px 60px;
+            background: var(--bg-main);
+            z-index: 5;
+        }
+
+        .deck-viewport.dir-forward .slide-panel.active-slide { order: 1; }
+        .deck-viewport.dir-forward .slide-panel.prev-slide {
+            order: 2;
+            border-left: 1px solid var(--border);
+        }
+
+        .deck-viewport.dir-backward .slide-panel.prev-slide {
+            order: 1;
+            border-right: 1px solid var(--border);
+        }
+        .deck-viewport.dir-backward .slide-panel.active-slide { order: 2; }
+
+        .prev-pane-indicator {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: #e4e4e7;
+            padding: 8px 14px;
+            border-radius: 999px;
+            margin-bottom: 18px;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--text-main);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .slide-panel.prev-slide .prev-pane-indicator {
+            display: flex;
+        }
+
+        .deck-viewport.single-pane-mode .slide-panel.active-slide {
+            flex: 1 1 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .slide-inner {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        /* --- SPENCER GABOR PILL BUTTONS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #2b2b2b;
+            color: #ffffff;
+            padding: 0.72rem 1.5rem;
+            border-radius: 999px;
+            font-family: var(--font-display);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn:hover {
+            background: var(--accent);
+            color: #ffffff;
+            transform: scale(1.04);
+        }
+
+        .btn-outline {
+            background: #e4e4e7;
+            color: #2b2b2b;
+        }
+        .btn-outline:hover {
+            background: #2b2b2b;
+            color: #ffffff;
+        }
+
+        /* --- SPENCER GABOR CENTERED SECTION HEADINGS --- */
+        .gabor-section-title {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .gabor-section-title h2 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            color: #2b2b2b;
+            letter-spacing: -0.01em;
+            line-height: 0.95;
+            margin-bottom: 8px;
+        }
+        .gabor-section-title p {
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            color: #52525b;
+            font-weight: 500;
+            margin: 0 auto;
+        }
+
+        /* ============================================================================
+           SLIDE 01: EXACT SPENCER GABOR HERO (IMAGE 1) + TWO-TONE ABOUT (IMAGE 7)
+           ============================================================================ */
+        .gabor-hero-stage {
+            text-align: center;
+            padding: 10px 0 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gabor-top-meta {
+            margin-bottom: 14px;
+        }
+        .gabor-top-meta .loc {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            color: #2b2b2b;
+            display: block;
+            text-transform: uppercase;
+        }
+        .gabor-top-meta .mail {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            color: #cbcbcb;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 2px;
+        }
+        .gabor-top-meta .mail:hover {
+            color: #2b2b2b;
+        }
+
+        .gabor-giant-name {
+            font-family: var(--font-display);
+            font-size: clamp(4.2rem, 10.5vw, 8.8rem);
+            color: #2b2b2b;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* 4 Fanned Overlapping Square Cards in Center of Hero */
+        .gabor-fanned-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 14px auto 26px;
+            padding: 18px 10px;
+            position: relative;
+            max-width: 780px;
+        }
+        .gabor-fan-card {
+            width: 185px;
+            height: 185px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 22px 44px -12px rgba(0, 0, 0, 0.18);
+            transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .gabor-fan-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gabor-fan-card:nth-child(1) {
+            background: #d4ff33;
+            transform: rotate(-6deg) translateY(10px);
+            z-index: 1;
+        }
+        .gabor-fan-card:nth-child(2) {
+            background: #0d8bf2;
+            margin-left: -34px;
+            transform: rotate(-2deg) translateY(-6px);
+            z-index: 2;
+        }
+        .gabor-fan-card:nth-child(3) {
+            background: #80e619;
+            margin-left: -34px;
+            transform: rotate(5deg) translateY(8px);
+            z-index: 3;
+        }
+        .gabor-fan-card:nth-child(4) {
+            background: #fae3e6;
+            margin-left: -34px;
+            transform: rotate(-3deg) translateY(-4px);
+            z-index: 4;
+        }
+        .gabor-fan-card:hover {
+            transform: scale(1.12) rotate(0deg) translateY(-10px) !important;
+            z-index: 10 !important;
+        }
+
+        .gabor-giant-role {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 7.8vw, 6.4rem);
+            color: #d4d4d4;
+            line-height: 0.94;
+            letter-spacing: -0.015em;
+            text-transform: uppercase;
+            max-width: 960px;
+            margin: 0 auto 28px;
+        }
+
+        .gabor-clients-tiny {
+            margin-top: 8px;
+            text-align: center;
+        }
+        .gabor-clients-tiny strong {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+            color: #2b2b2b;
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .gabor-clients-tiny span {
+            font-family: var(--font-display);
+            font-size: 0.86rem;
+            letter-spacing: 0.04em;
+            color: #d4d4d4;
+            text-transform: uppercase;
+        }
+
+        /* Spencer Gabor Two-Tone ABOUT Section (Image 7) */
+        .gabor-about-block {
+            margin-top: 48px;
+            padding-top: 42px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gabor-about-label {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            color: #2b2b2b;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .gabor-about-dark {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4.2vw, 3.3rem);
+            color: #2b2b2b;
+            line-height: 0.98;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .gabor-about-gray {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4.2vw, 3.3rem);
+            color: #d4d4d4;
+            line-height: 0.98;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        /* ============================================================================
+           SLIDE 03: SPENCER GABOR "FEATURED WORK" 3-CARD TILTED CAROUSEL + "MORE WORK"
+           ============================================================================ */
+        .gabor-featured-carousel {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            padding: 16px 0 24px;
+            overflow: hidden;
+        }
+        .gabor-wing-card {
+            width: 270px;
+            height: 330px;
+            border-radius: 26px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0.92;
+        }
+        .gabor-wing-card.left-wing {
+            transform: rotate(-10deg) translateY(24px) translateX(-16px);
+        }
+        .gabor-wing-card.right-wing {
+            transform: rotate(10deg) translateY(24px) translateX(16px);
+        }
+        .gabor-wing-card:hover {
+            opacity: 1;
+            transform: rotate(0deg) scale(1.03);
+        }
+        .gabor-wing-card img,
+        .gabor-center-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gabor-center-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+        }
+        .gabor-center-card {
+            width: min(440px, 82vw);
+            height: 410px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            transition: var(--transition);
+            background: #f4f4f5;
+        }
+        .gabor-center-card:hover {
+            transform: scale(1.02);
+        }
+        .gabor-pill-caption {
+            margin-top: 20px;
+            background: #dcdcdc;
+            color: #2b2b2b;
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 10px 28px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .gabor-pill-caption:hover {
+            background: #2b2b2b;
+            color: #ffffff;
+        }
+
+        /* MORE WORK 3-Column Colorful Square Grid (Images 3 & 4) */
+        .gabor-more-work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 24px;
+        }
+        .gabor-square-card {
+            aspect-ratio: 1 / 1;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 22px 44px -14px rgba(0, 0, 0, 0.13);
+            cursor: pointer;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .gabor-square-card:hover {
+            transform: translateY(-8px) rotate(-1.5deg) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2);
+        }
+        .gabor-square-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+        .gabor-square-card:hover img {
+            transform: scale(1.07);
+        }
+        .gabor-square-overlay {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to top, rgba(20, 20, 19, 0.88) 0%, rgba(20, 20, 19, 0.35) 65%, transparent 100%);
+            padding: 20px;
+            color: #fff;
+            text-align: left;
+        }
+        .gabor-square-overlay span.tag-pill {
+            display: inline-block;
+            background: #ffffff;
+            color: #18181b;
+            font-family: var(--font-display);
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 6px;
+        }
+        .gabor-square-overlay h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+        .gabor-square-overlay p {
+            color: rgba(255,255,255,0.86);
+            font-size: 0.8rem;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        /* ============================================================================
+           SPENCER GABOR INTERACTIVE HOVER PROJECT / EXPERIENCE DIRECTORY (IMAGE 9)
+           ============================================================================ */
+        .gabor-interactive-list-stage {
+            position: relative;
+            padding: 30px 0 40px;
+            text-align: center;
+        }
+        .gabor-list-heading {
+            font-family: var(--font-display);
+            font-size: 2.3rem;
+            color: #2b2b2b;
+            margin-bottom: 18px;
+        }
+        .gabor-giant-hover-item {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+            color: #d4d4d4;
+            line-height: 0.96;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+            position: relative;
+            display: block;
+            padding: 4px 0;
+        }
+        .gabor-giant-hover-item:hover,
+        .gabor-giant-hover-item.active-hover {
+            color: #2b2b2b;
+            transform: scale(1.02);
+        }
+        /* Floating flanking preview cards that appear when hovering the giant list (Image 9) */
+        .gabor-hover-float-card {
+            position: absolute;
+            width: 195px;
+            height: 195px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            pointer-events: none;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 15;
+        }
+        .gabor-hover-float-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gabor-hover-float-card.float-left {
+            left: 3%;
+            top: 24%;
+            transform: rotate(-5deg);
+        }
+        .gabor-hover-float-card.float-right {
+            right: 3%;
+            top: 26%;
+            transform: rotate(5deg);
+        }
+
+        /* ============================================================================
+           SPENCER GABOR "NEWS" 2x2 VIBRANT HORIZONTAL CARDS (IMAGE 8)
+           ============================================================================ */
+        .gabor-news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 860px;
+            margin: 0 auto 36px;
+        }
+        .gabor-news-card {
+            border-radius: 22px;
+            padding: 14px;
+            display: flex;
+            align-items: stretch;
+            gap: 16px;
+            min-height: 148px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+        .gabor-news-card:hover {
+            transform: translateY(-5px) scale(1.015);
+            box-shadow: var(--shadow-md);
+        }
+        .gabor-news-thumb {
+            width: 122px;
+            height: 122px;
+            border-radius: 14px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: #fff;
+        }
+        .gabor-news-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 4px 0;
+            text-align: left;
+        }
+        .gabor-news-info .news-top-tag {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+            line-height: 1;
+        }
+        .gabor-news-info .news-bottom-title {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            letter-spacing: 0.01em;
+            line-height: 1;
+        }
+        /* Exact 4 colors from Image 8 */
+        .gabor-news-card.lime { background: #dfff00; }
+        .gabor-news-card.lime .news-bottom-title { color: #00b84c; }
+        .gabor-news-card.pink { background: #ffc2f9; }
+        .gabor-news-card.pink .news-bottom-title { color: #ff471a; }
+        .gabor-news-card.orange { background: #ec5328; }
+        .gabor-news-card.orange .news-bottom-title { color: #ffd9f8; }
+        .gabor-news-card.teal { background: #1f5666; }
+        .gabor-news-card.teal .news-bottom-title { color: #dfff00; }
+
+        /* ============================================================================
+           SPENCER GABOR MASSIVE FULL-WIDTH "CONTACT" BLOCK (IMAGES 5 & 6)
+           ============================================================================ */
+        .gabor-contact-monolith {
+            margin-top: 32px;
+            background: #d9d9d9;
+            border-radius: 28px;
+            padding: 36px 20px 28px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .gabor-contact-giant-word {
+            font-family: var(--font-display);
+            font-size: clamp(4.5rem, 15.5vw, 13.5rem);
+            color: #ffffff;
+            line-height: 0.86;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            margin-bottom: 24px;
+            user-select: none;
+        }
+        .gabor-contact-links-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            letter-spacing: 0.03em;
+            color: #2b2b2b;
+            text-transform: uppercase;
+        }
+        .gabor-contact-links-stack a:hover {
+            opacity: 0.65;
+            text-decoration: underline;
+        }
+        .gabor-copyright-white {
+            margin-top: 22px;
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* --- EXPERIENCE & GITHUB CARDS (CLEAN BORDERLESS STUDIO CARDS) --- */
+        .exp-filter-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .timeline-tab-btn {
+            border: none;
+            background: #e4e4e7;
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-family: var(--font-display);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .timeline-tab-btn.active {
+            background: #2b2b2b;
+            color: #fff;
+        }
+
+        .experience-cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .exp-visual-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            display: grid;
+            grid-template-columns: 64px 1fr 240px;
+            gap: 20px;
+            align-items: start;
+            transition: var(--transition);
+        }
+        .exp-visual-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .exp-company-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: #f4f4f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 6px;
+        }
+        .exp-company-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .exp-body h3 {
+            font-size: 1.45rem;
+            margin-bottom: 4px;
+        }
+        .exp-company-meta {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+        .exp-date-pill {
+            font-size: 0.78rem;
+            font-family: var(--font-display);
+            letter-spacing: 0.04em;
+            background: #e4e4e7;
+            color: var(--text-main);
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        .exp-body ul {
+            padding-left: 18px;
+            margin-top: 8px;
+        }
+        .exp-body li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            list-style-type: disc;
+            line-height: 1.5;
+        }
+
+        .nielit-subroles {
+            margin-top: 14px;
+            padding-left: 16px;
+            border-left: 3px solid #e4e4e7;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .subrole-item { position: relative; }
+        .subrole-item::before {
+            content: '';
+            position: absolute;
+            left: -21px;
+            top: 6px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #2b2b2b;
+        }
+        .subrole-item h4 { font-size: 1.15rem; margin-bottom: 2px; }
+
+        .exp-Snapshot-thumb {
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--bg-subtle);
+            box-shadow: var(--shadow-sm);
+        }
+        .exp-Snapshot-thumb img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+        }
+        .exp-Snapshot-caption {
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            color: var(--text-main);
+            font-weight: 800;
+            background: #f4f4f5;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .tech-tags span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: #f4f4f5;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 999px;
+        }
+
+        .link-btn {
+            font-size: 0.82rem;
+            font-family: var(--font-display);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-main);
+            background: #e4e4e7;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .link-btn:hover {
+            background: #2b2b2b;
+            color: #fff;
+        }
+
+        /* --- SLIDE 4: GITHUB INTERACTIONS DASHBOARD --- */
+        .github-dashboard-wrapper {
+            background: #130d26;
+            border-radius: 28px;
+            padding: 26px;
+            color: #f3e8ff;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gh-heatmap-card {
+            background: rgba(25, 16, 48, 0.85);
+            border: 1px solid rgba(168, 85, 247, 0.22);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+
+        .gh-section-label {
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #a78bfa;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gh-months-row {
+            display: grid;
+            grid-template-columns: 36px repeat(12, 1fr);
+            font-family: var(--font-code);
+            font-size: 0.68rem;
+            color: #7c6f9f;
+            margin-bottom: 8px;
+        }
+
+        .gh-heatmap-body {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        .gh-days-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 112px;
+            font-family: var(--font-code);
+            font-size: 0.65rem;
+            color: #7c6f9f;
+            padding: 4px 0;
+        }
+
+        .gh-grid-matrix {
+            display: grid;
+            grid-template-columns: repeat(36, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            gap: 4px;
+            flex: 1;
+            min-width: 620px;
+        }
+
+        .gh-cell {
+            width: 13px;
+            height: 13px;
+            border-radius: 3px;
+            background: #231942;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: transform 0.15s ease;
+        }
+        .gh-cell:hover {
+            transform: scale(1.3);
+            z-index: 2;
+            border-color: #e9d5ff;
+        }
+        .gh-cell.lvl-1 { background: #4c1d95; }
+        .gh-cell.lvl-2 { background: #6d28d9; }
+        .gh-cell.lvl-3 { background: #8b5cf6; }
+        .gh-cell.lvl-4 { background: #c084fc; box-shadow: 0 0 8px rgba(192, 132, 252, 0.5); }
+
+        .gh-legend-row {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 5px;
+            margin-top: 12px;
+            font-family: var(--font-code);
+            font-size: 0.68rem;
+            color: #7c6f9f;
+        }
+
+        .gh-bottom-bento {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+        }
+
+        .gh-radar-card {
+            background: rgba(25, 16, 48, 0.85);
+            border: 1px solid rgba(168, 85, 247, 0.22);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gh-metrics-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .gh-stat-card {
+            background: rgba(25, 16, 48, 0.85);
+            border: 1px solid rgba(168, 85, 247, 0.22);
+            border-radius: 14px;
+            padding: 22px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .gh-stat-icon-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            background: rgba(139, 92, 246, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            color: #c084fc;
+            font-size: 1.1rem;
+        }
+        .gh-stat-card h3 {
+            font-family: var(--font-code);
+            font-size: 2.1rem;
+            color: #c084fc;
+            margin-bottom: 4px;
+        }
+        .gh-stat-card span {
+            font-family: var(--font-code);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            color: #8b7ba8;
+            text-transform: uppercase;
+        }
+
+        /* --- SLIDE 5: SKILLS & RECOGNITION --- */
+        .skills-vector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+        .skill-vector-card {
+            background: #f4f4f5;
+            border-radius: 22px;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .skill-vector-card:hover {
+            background: #dfff00;
+            transform: translateY(-5px) rotate(-2deg);
+            box-shadow: var(--shadow-md);
+        }
+        .skill-vector-card img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+        .skill-vector-card span {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            color: var(--text-main);
+        }
+
+        /* --- BLOG, SPOTIFY & VISITOR WALL --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 18px;
+        }
+        .blog-card {
+            background: #f4f4f5;
+            border-radius: 22px;
+            overflow: hidden;
+            display: flex;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .vote-section {
+            background: #e4e4e7;
+            padding: 12px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 48px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+            padding: 4px;
+            font-weight: 800;
+        }
+        .vote-count { font-weight: 800; font-size: 0.85rem; margin: 4px 0; }
+        .blog-content { padding: 16px; flex: 1; }
+        .blog-title { font-size: 1.3rem; margin-bottom: 4px; }
+
+        .spotify-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 14px;
+        }
+        .spotify-card {
+            background: #f4f4f5;
+            padding: 12px 14px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+        .spotify-card:hover {
+            transform: translateY(-3px);
+            background: #e6f4ea;
+        }
+        .track-art { width: 50px; height: 50px; border-radius: 12px; object-fit: cover; }
+        .track-name { font-weight: 800; font-size: 0.88rem; display: block; }
+        .track-artist { font-size: 0.76rem; color: var(--text-muted); font-weight: 600; }
+
+        input, textarea {
+            width: 100%;
+            background: #f4f4f5;
+            border: 1px solid transparent;
+            padding: 0.85rem 1.1rem;
+            border-radius: 16px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.92rem;
+            font-weight: 600;
+            outline: none;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        input:focus, textarea:focus {
+            background: #ffffff;
+            border-color: #2b2b2b;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .messages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .message-card {
+            background: #f4f4f5;
+            padding: 14px 16px;
+            border-radius: 18px;
+        }
+
+        .hero-msg-bubble {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 5px 9px;
+            max-width: 145px;
+            box-shadow: var(--shadow-md);
+            z-index: 30;
+            font-size: 0.7rem;
+            cursor: grab;
+            user-select: none;
+            text-align: left;
+        }
+        .hero-msg-bubble strong {
+            color: var(--accent);
+            display: block;
+            font-size: 0.62rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .hero-msg-bubble p {
+            margin: 0;
+            color: var(--text-main);
+            font-size: 0.7rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* --- MODALS & TOAST --- */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(20, 20, 19, 0.55);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 30px;
+            width: 100%;
+            max-width: 580px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+        .close-modal {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-main);
+            font-weight: 800;
+        }
+
+        .toast-notification {
+            position: fixed;
+            top: 76px;
+            right: 24px;
+            background: #2b2b2b;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-family: var(--font-display);
+            letter-spacing: 0.04em;
+            font-size: 0.9rem;
+            z-index: 3000;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+        .toast-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1150;
+        }
+
+        /* Container queries for the 30% context pane */
+        @container (max-width: 580px) {
+            .gabor-fanned-cards { transform: scale(0.65); margin: -20px auto; }
+            .gabor-wing-card { display: none !important; }
+            .gabor-more-work-grid,
+            .gabor-news-grid,
+            .exp-visual-card,
+            .gh-bottom-bento,
+            .gh-metrics-2x2 {
+                grid-template-columns: 1fr !important;
+            }
+            .gabor-hover-float-card { display: none !important; }
+            .exp-Snapshot-thumb { grid-column: 1 / -1 !important; }
+        }
+
+        /* --- FULL MOBILE & TABLET RESPONSIVENESS --- */
+        @media (max-width: 992px) {
+            .gabor-wing-card { display: none; }
+            .gabor-more-work-grid { grid-template-columns: repeat(2, 1fr); }
+            .exp-visual-card { grid-template-columns: 52px 1fr; }
+            .exp-Snapshot-thumb { grid-column: 1 / -1; }
+            .gh-bottom-bento { grid-template-columns: 1fr; }
+            .gabor-hover-float-card { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-Drawer-btn { display: inline-flex; }
+            .app-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 285px !important;
+                flex: 0 0 285px !important;
+                transform: translateX(-105%);
+                box-shadow: var(--shadow-lg);
+            }
+            body.mobile-drawer-open .app-sidebar { transform: translateX(0); }
+            body.mobile-drawer-open .mobile-sidebar-backdrop { display: block; }
+
+            #header {
+                padding: 8px 14px;
+                height: auto;
+                min-height: 60px;
+            }
+            .weather-widget { display: none !important; }
+            .mode-switch-btn { padding: 5px 10px; font-size: 0.7rem; }
+
+            .slide-panel.prev-slide { display: none !important; }
+            .slide-panel.active-slide {
+                flex: 1 1 100% !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 18px 14px 80px !important;
+            }
+
+            .gabor-fanned-cards {
+                flex-wrap: nowrap;
+                transform: scale(0.72);
+                margin: -10px auto 4px;
+            }
+            .gabor-fan-card {
+                width: 135px;
+                height: 135px;
+            }
+            .gabor-more-work-grid,
+            .gabor-news-grid {
+                grid-template-columns: 1fr;
+            }
+            .gabor-center-card {
+                height: 300px;
+            }
+            .contact-split-box {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body data-profession="developer">
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification">
+        <i class="fas fa-check-circle" style="color: #dfff00;"></i>
+        <span id="toastMessage">Switched Mode</span>
+    </div>
+
+    <!-- Spencer Gabor Floating Bottom-Right Palette Button & Drawer -->
+    <div class="gabor-floating-palette-wrap" id="gaborPaletteWrap">
+        <div class="gabor-palette-drawer">
+            <span class="palette-swatch active" style="background:#ffffff;" data-palette="cream" title="Pure Studio White"></span>
+            <span class="palette-swatch" style="background:#b9f6ca;" data-palette="mint" title="Studio Mint"></span>
+            <span class="palette-swatch" style="background:#ffe57f;" data-palette="butter" title="Butter Yellow"></span>
+            <span class="palette-swatch" style="background:#d1c4e9;" data-palette="lavender" title="Soft Lavender"></span>
+            <span class="palette-swatch" style="background:#ffab91;" data-palette="coral" title="Warm Coral"></span>
+        </div>
+        <button class="gabor-palette-fab" id="gaborPaletteBtn" title="Switch Studio Background Palette">
+            <i class="fas fa-palette"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Backdrop when Drawer is Open -->
+    <div class="mobile-sidebar-backdrop" id="mobileSidebarBackdrop"></div>
+
+    <!-- ==================== GEMINI-STYLE PUSH LAYOUT SHELL ==================== -->
+    <div class="app-shell">
+
+        <!-- LEFT PUSH SIDEBAR (EXPANDED FULL PROFILE PANEL OR COLLAPSED ICON RAIL) -->
+        <aside class="app-sidebar" id="appSidebar" aria-label="Portfolio Navigation">
+            <div class="sidebar-top-bar">
+                <button class="sidebar-trigger-btn" id="toggleSidebarBtn" title="Collapse / Expand Sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="sidebar-brand-text">ROHIT NAYAK</span>
+            </div>
+
+            <!-- RICH PROFILE PANEL AT TOP OF SIDEBAR -->
+            <div class="sidebar-profile-showcase">
+                <div class="sidebar-photo-box">
+                    <img src="assets/img/chandan-saroj.png" 
+                         onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'" 
+                         alt="Rohit Nayak" 
+                         class="profile-photo">
+                    <div id="heroMessages"></div>
+                </div>
+                <div class="sidebar-profile-details">
+                    <h4>ROHIT NAYAK</h4>
+                    <span class="sidebar-role-tag dev-only">MERN Stack & .NET Engineer • 2.5+ Yrs</span>
+                    <span class="sidebar-role-tag ds-only">Data Science Specialist @ HYI.AI • 4+ Yrs</span>
+                    <div class="sidebar-mini-banner">
+                        <img class="dev-only" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Developer Architecture">
+                        <img class="ds-only" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data Science Analytics">
+                        <div class="sidebar-mini-banner-foot">
+                            <span class="dev-only"><i class="fas fa-server"></i> Production Web & API</span>
+                            <span class="ds-only"><i class="fas fa-chart-line"></i> Neural & Data Infra</span>
+                            <a href="https://linkedin.com/in/chandan-saroj" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 800;">LinkedIn ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="photo-upload-btn" id="chooseProfilePhoto">
+                    <i class="fas fa-camera"></i> अपनी फोटो लगाएँ
+                </button>
+                <input type="file" id="profilePhotoInput" accept="image/*" hidden>
+            </div>
+
+            <div class="sidebar-nav-list">
+                <button class="sidebar-nav-btn active" data-slide="0" title="01. Overview & About">
+                    <span class="nav-left"><i class="fas fa-house"></i> <span class="sidebar-nav-label">Overview & About</span></span>
+                    <span class="slide-num">01</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="1" title="02. Work Experience">
+                    <span class="nav-left"><i class="fas fa-briefcase"></i> <span class="sidebar-nav-label">Work Experience</span></span>
+                    <span class="slide-num">02</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="2" title="03. Featured & More Work">
+                    <span class="nav-left"><i class="fas fa-layer-group"></i> <span class="sidebar-nav-label">Featured Work</span></span>
+                    <span class="slide-num">03</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="3" title="04. GitHub Heatmap & Stats">
+                    <span class="nav-left"><i class="fab fa-github"></i> <span class="sidebar-nav-label">GitHub Heatmap</span></span>
+                    <span class="slide-num">04</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="4" title="05. Skills & Recognition">
+                    <span class="nav-left"><i class="fas fa-award"></i> <span class="sidebar-nav-label">Skills & Awards</span></span>
+                    <span class="slide-num">05</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="5" title="06. Blog, Music & Wall">
+                    <span class="nav-left"><i class="fas fa-newspaper"></i> <span class="sidebar-nav-label">Blog, Music & Wall</span></span>
+                    <span class="slide-num">06</span>
+                </button>
+                <button class="sidebar-nav-btn" data-slide="6" title="07. News & Contact">
+                    <span class="nav-left"><i class="fas fa-paper-plane"></i> <span class="sidebar-nav-label">News & Contact</span></span>
+                    <span class="slide-num">07</span>
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-step-row">
+                    <button class="sidebar-step-btn" id="prevSlideBtn" title="Previous Section (30% Left)">
+                        <i class="fas fa-arrow-left"></i> <span>Prev</span>
+                    </button>
+                    <button class="sidebar-step-btn" id="nextSlideBtn" title="Next Section (30% Right)">
+                        <span>Next</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="sidebar-stats-row">
+                    <span><i class="fas fa-globe"></i> <strong id="globalViewCount">...</strong></span>
+                    <span><i class="fas fa-eye"></i> Today: <strong id="todayViewCount">...</strong></span>
+                </div>
+                <a href="assets/resume.pdf" target="_blank" class="btn sidebar-resume-btn" title="Download Resume PDF">
+                    <i class="fas fa-file-arrow-down"></i> <span class="resume-btn-text">Download Resume</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- RIGHT WORKSPACE AREA -->
+        <div class="workspace-main">
+
+            <!-- MINIMAL SPENCER GABOR TOP BAR -->
+            <header id="header">
+                <div class="header-left">
+                    <button class="sidebar-trigger-btn mobile-Drawer-btn" id="mobileMenuBtn" title="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="brand-logo" onclick="window.goToSlide(0)">
+                        <span>ROHIT NAYAK</span>
+                    </div>
+
+                    <!-- MINIMAL DUAL-MODE SEGMENTED SWITCH -->
+                    <div class="minimal-mode-switch" role="group" aria-label="Profile Mode Switch">
+                        <button type="button" class="mode-switch-btn active" data-target-mode="developer">
+                            <i class="fas fa-code"></i>
+                            <span>Developer (2.5+ Yrs)</span>
+                        </button>
+                        <button type="button" class="mode-switch-btn" data-target-mode="datascience">
+                            <i class="fas fa-brain"></i>
+                            <span>Data Science (4+ Yrs)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div id="weather-widget" class="weather-widget" style="display:none;">
+                        <span class="weather-location" id="weatherLocation"><i class="fas fa-location-dot"></i> <span>Delhi</span></span>
+                        <div class="weather-info">
+                            <span id="weatherTemp">--°C</span>
+                            <span id="weatherCondition" style="display:none;"></span>
+                            <span id="weatherAQI" style="border-left:1px solid var(--border); padding-left:8px;">AQI: --</span>
+                        </div>
+                    </div>
+
+                    <button class="sidebar-trigger-btn" id="likeBtn" title="Like Portfolio" style="width: auto; border-radius: 999px; padding: 0 14px; gap: 6px; font-size: 0.8rem; font-weight: 800;">
+                        <i class="fas fa-heart" style="color: #e11d48;"></i>
+                        <span id="likeCount">0</span>
+                    </button>
+
+                    <!-- Spencer Gabor Signature Top-Right Circular Avatar Button -->
+                    <div class="gabor-floating-avatar" onclick="window.goToSlide(0)" title="Back to Hero Overview">
+                        <img src="assets/img/chandan-saroj.png" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'" alt="Chandan Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- ==================== DIRECTIONAL 30% / 70% SPLIT VIEWPORT ==================== -->
+            <main class="deck-viewport dir-forward" id="deckViewport">
+
+        <!-- ==================== SLIDE 0: EXACT SPENCER GABOR HERO + TWO-TONE ABOUT (IMAGES 1 & 7) ==================== -->
+        <section class="slide-panel active-slide" data-slide-index="0" data-slide-title="01 / Overview">
+            <div class="slide-inner">
+                
+                <!-- SPENCER GABOR CENTERED HERO (IMAGE 1) -->
+                <div class="gabor-hero-stage">
+                    <div class="gabor-top-meta">
+                        <span class="loc">BENGALURU & DELHI, INDIA</span>
+                        <a href="mailto:imjunior471@gmail.com" class="mail">IMJUNIOR471@GMAIL.COM</a>
+                    </div>
+
+                    <h1 class="gabor-giant-name">ROHIT NAYAK</h1>
+
+                    <!-- 4 Overlapping Fanned Square Project Cards (Clicking jumps to Featured Work) -->
+                    <div class="gabor-fanned-cards">
+                        <div class="gabor-fan-card" onclick="window.goToSlide(2)" title="SimpleBit & MERN Stack">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="SimpleBit Fintech">
+                        </div>
+                        <div class="gabor-fan-card" onclick="window.goToSlide(2)" title="SmartLane AI — YOLOv8">
+                            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80" alt="SmartLane AI">
+                        </div>
+                        <div class="gabor-fan-card" onclick="window.goToSlide(2)" title="NIELIT SHA-256 Platform">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Secure Question Paper">
+                        </div>
+                        <div class="gabor-fan-card" onclick="window.goToSlide(2)" title="IndiaAI & Springer Diffusion Research">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" alt="IndiaAI Research">
+                        </div>
+                    </div>
+
+                    <!-- Giant Muted Gray Role Typography (Swaps between Developer & Data Science) -->
+                    <h2 class="gabor-giant-role dev-only">
+                        SOFTWARE ENGINEER,<br>MERN & .NET ARCHITECT
+                    </h2>
+                    <h2 class="gabor-giant-role ds-only">
+                        DATA SCIENCE SPECIALIST,<br>AI RESEARCHER & TRAINER
+                    </h2>
+
+                    <div class="gabor-clients-tiny">
+                        <strong>ORGANIZATIONS & PROGRAMS INCLUDE</strong>
+                        <span>HYI.AI, NIELIT (GOVT. OF INDIA), INDIAAI (MEITY), NITI AAYOG, WEBCREATERS_, BR TECHGEEKS, PIET COLLEGE, SPRINGER</span>
+                    </div>
+                </div>
+
+                <!-- SPENCER GABOR TWO-TONE ABOUT STATEMENT (IMAGE 7) -->
+                <div class="gabor-about-block">
+                    <span class="gabor-about-label">ABOUT</span>
+
+                    <!-- Developer Mode Two-Tone Bio -->
+                    <div class="dev-only">
+                        <div class="gabor-about-dark">
+                            ROHIT NAYAK IS A SOFTWARE DEVELOPMENT ENGINEER (2.5+ YRS EXP) SPECIALIZING IN FULL-STACK WEB ARCHITECTURE AND CLOUD SOLUTIONS USING THE MERN STACK & ASP.NET CORE.
+                        </div>
+                        <div class="gabor-about-gray">
+                            HIS ENGINEERING PRACTICE CREATES HIGH-PERFORMANCE RESTFUL APIS AND RESPONSIVE INTERFACES, ACTIVELY MANAGING AWS & UBUNTU SERVER INFRASTRUCTURE, JENKINS CI/CD PIPELINES, AND SHA-256 DATABASE SECURITY FOR 30,000+ FILES.
+                        </div>
+                    </div>
+
+                    <!-- Data Science Mode Two-Tone Bio -->
+                    <div class="ds-only">
+                        <div class="gabor-about-dark">
+                            ROHIT NAYAK IS A DATA SCIENCE SPECIALIST AT HYI.AI (4+ YRS EXP) AND FORMER SDE AT NIELIT ROPAR, DESIGNING HIGH-TRAFFIC PORTALS AND INTEGRATING ML MODELS INTO PRODUCTION WORKFLOWS.
+                        </div>
+                        <div class="gabor-about-gray">
+                            HIS RESEARCH ON RESUME CLASSIFICATION (RNN), YOLOV8 OBJECT DETECTION & DIFFUSION MODELS IS PUBLISHED IN SPRINGER JOURNALS (6 CITATIONS) AND WON THE "BEST PROJECT IN AI/ML" AWARD AT NICEDT 2025 & PARANOX 2.0.
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                        <button class="btn" onclick="window.goToSlide(2)">Explore Featured Work →</button>
+                        <button class="btn btn-outline" onclick="window.goToSlide(1)">Career Timeline (02)</button>
+                        <button class="btn btn-outline" onclick="window.goToSlide(3)">GitHub Heatmap (04)</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 1: WORK EXPERIENCE + SPENCER GABOR HOVER DIRECTORY (IMAGE 9) ==================== -->
+        <section class="slide-panel" data-slide-index="1" data-slide-title="02 / Experience">
+            <div class="slide-inner">
+                <div class="gabor-section-title">
+                    <h2>EXPERIENCE</h2>
+                    <p>Verified career path across Data Science (4+ Yrs) and Full-Stack Engineering (2.5+ Yrs)</p>
+                </div>
+
+                <!-- Spencer Gabor Interactive Hover Project/Role Stack (Image 9) -->
+                <div class="gabor-interactive-list-stage" id="expHoverStage">
+                    <div class="gabor-hover-float-card float-left">
+                        <img id="expFloatLeftImg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Preview Left">
+                    </div>
+                    <div class="gabor-hover-float-card float-right">
+                        <img id="expFloatRightImg" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Preview Right">
+                    </div>
+
+                    <span class="gabor-giant-hover-item active-hover"
+                          data-img-left="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+                          data-img-right="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=500&q=80">
+                        HYI.AI BENGALURU
+                    </span>
+                    <span class="gabor-giant-hover-item"
+                          data-img-left="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80"
+                          data-img-right="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80">
+                        BR TECHGEEKS & PIET
+                    </span>
+                    <span class="gabor-giant-hover-item"
+                          data-img-left="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                          data-img-right="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=500&q=80">
+                        WEBCREATERS_ MERN
+                    </span>
+                    <span class="gabor-giant-hover-item"
+                          data-img-left="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80"
+                          data-img-right="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80">
+                        NIELIT & INDIAAI
+                    </span>
+                    <span class="gabor-giant-hover-item"
+                          data-img-left="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=500&q=80"
+                          data-img-right="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=500&q=80">
+                        NITI AAYOG SHAHDOL
+                    </span>
+                </div>
+
+                <div class="exp-filter-row">
+                    <button class="timeline-tab-btn active" data-filter="mode">Match Active Profile Mode</button>
+                    <button class="timeline-tab-btn" data-filter="all">All Experience</button>
+                    <button class="timeline-tab-btn" data-filter="dev">Developer Roles (2.5+ Yrs)</button>
+                    <button class="timeline-tab-btn" data-filter="ds">Data Science Roles (4+ Yrs)</button>
+                </div>
+
+                <div class="experience-cards-list" id="experienceTimeline">
+
+                    <!-- 1. HYI.AI (Aug 2026 - Present) -->
+                    <div class="exp-visual-card" data-track="ds">
+                        <div class="exp-company-logo">
+                            <img src="https://ui-avatars.com/api/?name=HYI.ai&background=eef2ff&color=4f46e5&bold=true&size=120" alt="HYI.AI">
+                        </div>
+                        <div class="exp-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <h3>Data Science Specialist</h3>
+                                <span class="exp-date-pill">Aug 2026 - Present • 4 mos</span>
+                            </div>
+                            <div class="exp-company-meta">
+                                <span><strong>HYI.AI</strong> • Full-time</span>
+                                <span>• Bengaluru, Karnataka, India (Hybrid)</span>
+                            </div>
+                            <p style="font-size: 0.88rem; margin-bottom: 6px;">
+                                Delivering data-driven solutions for modern Indian education strategy, focusing on scalable data infrastructure and predictive intelligence to drive future initiatives for Indian youth.
+                            </p>
+                            <div class="tech-tags" style="margin-bottom: 0; margin-top: 8px;">
+                                <span>Data Science</span><span>Scalable ML Infrastructure</span><span>Educational Analytics</span><span>Python</span>
+                            </div>
+                        </div>
+                        <div class="exp-Snapshot-thumb">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="HYI.AI Data Science">
+                            <div class="exp-Snapshot-caption"><i class="fas fa-chart-pie"></i> Education Strategy & Data Infra</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. BR TECHGEEKS PRIVATE LIMITED (Jun 2026 - Aug 2026) -->
+                    <div class="exp-visual-card" data-track="ds">
+                        <div class="exp-company-logo">
+                            <img src="https://ui-avatars.com/api/?name=BR+Tech&background=f0f9ff&color=0284c7&bold=true&size=120" alt="BR TECHGEEKS">
+                        </div>
+                        <div class="exp-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <h3>Data Science Trainer</h3>
+                                <span class="exp-date-pill">Jun 2026 - Aug 2026 • 3 mos</span>
+                            </div>
+                            <div class="exp-company-meta">
+                                <span><strong>BR TECHGEEKS PRIVATE LIMITED</strong> • Full-time</span>
+                                <span>• Noida, Uttar Pradesh, India (Hybrid)</span>
+                            </div>
+                            <ul>
+                                <li>Delivered intensive corporate and academic training modules on Applied Data Science, Machine Learning algorithms, Python (Pandas, Scikit-Learn), and real-world project deployment.</li>
+                                <li>Also led the <strong>AI & Data Science Summer Training Program at PIET College</strong>, mentoring engineering cohorts on Computer Vision and Deep Learning capstones.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-Snapshot-thumb">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=500&q=80" alt="Data Science Training">
+                            <div class="exp-Snapshot-caption"><i class="fas fa-chalkboard-user"></i> Data Science & AI Mentorship</div>
+                        </div>
+                    </div>
+
+                    <!-- 3. WEBCREATERS_ (Jan 2026 - May 2026) -->
+                    <div class="exp-visual-card" data-track="dev">
+                        <div class="exp-company-logo">
+                            <img src="https://ui-avatars.com/api/?name=WC&background=f0fdf4&color=16a34a&bold=true&size=120" alt="Webcreaters_">
+                        </div>
+                        <div class="exp-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <h3>MERN Stack Developer</h3>
+                                <span class="exp-date-pill">Jan 2026 - May 2026 • 5 mos</span>
+                            </div>
+                            <div class="exp-company-meta">
+                                <span><strong>Webcreaters_</strong> • Full-time</span>
+                                <span>• Chandigarh, India (On-site)</span>
+                            </div>
+                            <ul>
+                                <li><strong>Full Stack Web Development (MERN) & Frontend Engineering (React.js & UI Implementation):</strong></li>
+                                <li><strong>SimpleBit (Fintech Dashboard):</strong> Architected crypto trading frontend using React & TypeScript with live market charts and JWT auth (<code>app.simple-bit.com</code>).</li>
+                                <li><strong>The Hidout (Booking Platform):</strong> Built property reservation engine & CMS with payment gateway integration (<code>dev.thehidout.com</code>).</li>
+                                <li><strong>AksumBase (Resource Mgmt):</strong> Engineered scalable backend, admin dashboard, and automated <strong>Jenkins CI/CD pipelines</strong> (<code>aksumbase.com</code>).</li>
+                            </ul>
+                        </div>
+                        <div class="exp-Snapshot-thumb">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Webcreaters MERN">
+                            <div class="exp-Snapshot-caption"><i class="fas fa-laptop-code"></i> Production MERN & CI/CD</div>
+                        </div>
+                    </div>
+
+                    <!-- 4. NIELIT (1 yr 9 mos Total + Internship — Grouped LinkedIn Style) -->
+                    <div class="exp-visual-card" data-track="both">
+                        <div class="exp-company-logo">
+                            <img src="https://ui-avatars.com/api/?name=NIELIT&background=eff6ff&color=1d4ed8&bold=true&size=120" alt="NIELIT">
+                        </div>
+                        <div class="exp-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <h3>NATIONAL INSTITUTE OF ELECTRONICS & INFORMATION TECHNOLOGY (NIELIT)</h3>
+                                <span class="exp-date-pill">Full-time • 1 yr 9 mos + 7 mos Intern</span>
+                            </div>
+                            <div class="exp-company-meta">
+                                <span>Ministry of Electronics & IT (MeitY), Govt. of India</span>
+                                <span>• Ropar & Chandigarh (On-site)</span>
+                            </div>
+
+                            <div class="nielit-subroles">
+                                <div class="subrole-item">
+                                    <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+                                        <h4>Resource Person - Software Development</h4>
+                                        <span class="exp-date-pill">May 2025 - Jan 2026 • 9 mos (Ropar)</span>
+                                    </div>
+                                    <p style="font-size: 0.84rem; margin-top: 4px;">
+                                        Architected SaaS platform features in React & Node.js/TypeScript, engineered ASP.NET Core REST API gateways handling 500+ concurrent requests, and implemented SHA-256 encrypted question paper security for 30,000+ exam files.
+                                    </p>
+                                </div>
+
+                                <div class="subrole-item">
+                                    <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+                                        <h4>Software Development Engineer & IndiaAI Specialist</h4>
+                                        <span class="exp-date-pill">May 2024 - May 2025 • 1 yr (Ropar)</span>
+                                    </div>
+                                    <p style="font-size: 0.84rem; margin-top: 4px;">
+                                        Contributed 1.5 years to the <strong>IndiaAI Program</strong>, built the official NIELIT Ropar University Portal, developed the "Amigo" VS Code extension, and published Springer research on Diffusion Models & Audio Deep Learning.
+                                    </p>
+                                </div>
+
+                                <div class="subrole-item">
+                                    <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+                                        <h4>Artificial Intelligence and Machine Learning Intern</h4>
+                                        <span class="exp-date-pill">Aug 2023 - Feb 2024 • 7 mos (Chandigarh)</span>
+                                    </div>
+                                    <p style="font-size: 0.84rem; margin-top: 4px;">
+                                        Worked on real-world AI/ML and Python (Django) projects including the <strong>Identity Card Automation System</strong>. Presented research paper <em>"Resume Summarization - An Application of Generative AI"</em> at NICEDT-2024 (published by Springer in Guwahati, Assam) and conducted practical training sessions for government officers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exp-Snapshot-thumb">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="NIELIT MeitY">
+                            <div class="exp-Snapshot-caption"><i class="fas fa-building-columns"></i> NIELIT Ropar & Chandigarh</div>
+                        </div>
+                    </div>
+
+                    <!-- 5. NITI AAYOG PROGRAM IN SHAHDOL (3 MONTHS) -->
+                    <div class="exp-visual-card" data-track="ds">
+                        <div class="exp-company-logo">
+                            <img src="https://ui-avatars.com/api/?name=NITI&background=fef3c7&color=b45309&bold=true&size=120" alt="NITI Aayog">
+                        </div>
+                        <div class="exp-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <h3>Data Science & Governance Associate (NITI Aayog Program)</h3>
+                                <span class="exp-date-pill">3 Months Tenure • Shahdol</span>
+                            </div>
+                            <div class="exp-company-meta">
+                                <span><strong>NITI Aayog Initiative</strong></span>
+                                <span>• Shahdol, Madhya Pradesh (On-site)</span>
+                            </div>
+                            <ul>
+                                <li>Executed a 3-month field and data science engagement in Shahdol, analyzing regional socio-economic, education, and infrastructure KPIs to power administrative dashboards.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-Snapshot-thumb">
+                            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=500&q=80" alt="NITI Aayog Shahdol">
+                            <div class="exp-Snapshot-caption"><i class="fas fa-chart-line"></i> Shahdol Governance Analytics</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 2: SPENCER GABOR "FEATURED WORK" CAROUSEL + "MORE WORK" 3x2 GRID (IMAGES 2, 3, 4) ==================== -->
+        <section class="slide-panel" data-slide-index="2" data-slide-title="03 / Featured Work">
+            <div class="slide-inner">
+                
+                <!-- FEATURED WORK HEADER & 3-CARD TILTED CAROUSEL (IMAGE 2) -->
+                <div class="gabor-section-title">
+                    <h2>FEATURED WORK</h2>
+                    <p>Select recent and notable projects (Click side cards to cycle)</p>
+                </div>
+
+                <!-- Developer Featured Carousel -->
+                <div class="gabor-featured-carousel dev-only" id="devFeaturedCarousel">
+                    <div class="gabor-wing-card left-wing" onclick="window.cycleFeatured('dev', -1)">
+                        <img id="devWingLeftImg" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="Previous Project">
+                    </div>
+                    <div class="gabor-center-stage">
+                        <div class="gabor-center-card" id="devCenterCard" onclick="window.openFeaturedLink('dev')">
+                            <img id="devCenterImg" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80" alt="Featured Developer Project">
+                        </div>
+                        <button class="gabor-pill-caption" id="devCenterPill" onclick="window.openFeaturedLink('dev')">
+                            SECURE QUESTION PAPER PLATFORM ↗
+                        </button>
+                    </div>
+                    <div class="gabor-wing-card right-wing" onclick="window.cycleFeatured('dev', 1)">
+                        <img id="devWingRightImg" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=700&q=80" alt="Next Project">
+                    </div>
+                </div>
+
+                <!-- Data Science Featured Carousel -->
+                <div class="gabor-featured-carousel ds-only" id="dsFeaturedCarousel">
+                    <div class="gabor-wing-card left-wing" onclick="window.cycleFeatured('ds', -1)">
+                        <img id="dsWingLeftImg" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80" alt="Previous AI Project">
+                    </div>
+                    <div class="gabor-center-stage">
+                        <div class="gabor-center-card" id="dsCenterCard" onclick="window.openFeaturedLink('ds')">
+                            <img id="dsCenterImg" src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=900&q=80" alt="Featured AI Project">
+                        </div>
+                        <button class="gabor-pill-caption" id="dsCenterPill" onclick="window.openFeaturedLink('ds')">
+                            SMARTLANE AI (YOLOV8) ↗
+                        </button>
+                    </div>
+                    <div class="gabor-wing-card right-wing" onclick="window.cycleFeatured('ds', 1)">
+                        <img id="dsWingRightImg" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=700&q=80" alt="Next AI Project">
+                    </div>
+                </div>
+
+                <!-- MORE WORK HEADER & 3x2 ROUNDED SQUARE GRID (IMAGES 3 & 4) -->
+                <div class="gabor-section-title" style="margin-top: 52px;">
+                    <h2>MORE WORK</h2>
+                    <p>Take a click, stay a while</p>
+                </div>
+
+                <!-- DEVELOPER 3x2 SQUARE GRID -->
+                <div class="gabor-more-work-grid dev-only">
+                    <a href="https://github.com/chandanXP/NIELIT-Secure-Question-Paper-Platform" target="_blank" rel="noopener" class="gabor-square-card" style="background:#d4ff33;">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="Secure Question Paper">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">SHA-256 • SQL SERVER</span>
+                            <h3>SECURE EXAM PLATFORM</h3>
+                            <p>Zero plaintext DBA exposure for 30,000+ examination files at NIELIT.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://app.simple-bit.com" target="_blank" rel="noopener" class="gabor-square-card" style="background:#e8e6d9;">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=700&q=80" alt="SimpleBit">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">REACT • TYPESCRIPT</span>
+                            <h3>SIMPLEBIT FINTECH</h3>
+                            <p>Live crypto trading frontend with JWT auth & market charts.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://dev.thehidout.com" target="_blank" rel="noopener" class="gabor-square-card" style="background:#f26449;">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="The Hidout">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">MERN STACK • CMS</span>
+                            <h3>THE HIDOUT BOOKING</h3>
+                            <p>Full-stack property reservation engine and payment workflows.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://aksumbase.com" target="_blank" rel="noopener" class="gabor-square-card" style="background:#a8c7fa;">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80" alt="AksumBase">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">JENKINS CI/CD • DOCKER</span>
+                            <h3>AKSUMBASE CLOUD</h3>
+                            <p>Automated CI/CD deployment pipelines and resource dashboard.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/chandanXP/nielit-ropar-university" target="_blank" rel="noopener" class="gabor-square-card" style="background:#00994d;">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=700&q=80" alt="NIELIT Portal">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">GOVT PORTAL • NIELIT</span>
+                            <h3>NIELIT UNIVERSITY</h3>
+                            <p>High-traffic admission & academic portal for NIELIT Ropar.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://idcardnielit.pythonanywhere.com/" target="_blank" rel="noopener" class="gabor-square-card" style="background:#f4b4aa;">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80" alt="ID Card & LMS">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">DJANGO • OPENCV</span>
+                            <h3>ID AUTOMATION & LMS</h3>
+                            <p>Automated batch ID card generator reducing manual work by 60%.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- DATA SCIENCE SPECIALIST 3x2 SQUARE GRID -->
+                <div class="gabor-more-work-grid ds-only">
+                    <div onclick="window.openProofModal('govt_ai')" class="gabor-square-card" style="background:#d4ff33;">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=700&q=80" alt="IndiaAI Program">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">1.5 YEARS • MEITY</span>
+                            <h3>INDIAAI INITIATIVE</h3>
+                            <p>Diffusion Models, Audio DL pipelines & national AI mission research.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://paranox-sourcecode.hf.space" target="_blank" rel="noopener" class="gabor-square-card" style="background:#0d8bf2;">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=700&q=80" alt="SmartLane AI">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">99.2% ACCURACY • YOLOV8</span>
+                            <h3>SMARTLANE AI</h3>
+                            <p>Paranox 2.0 National Hackathon Winning traffic & emergency vision.</p>
+                        </div>
+                    </a>
+
+                    <div onclick="window.openProofModal('piet_training')" class="gabor-square-card" style="background:#f26449;">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=700&q=80" alt="PIET Training">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">LEAD TRAINER • PIET</span>
+                            <h3>PIET AI SUMMER PROGRAM</h3>
+                            <p>Mentored engineering cohorts in Python, EDA, Scikit-Learn & YOLO.</p>
+                        </div>
+                    </div>
+
+                    <div onclick="window.openProofModal('niti_shahdol')" class="gabor-square-card" style="background:#f5c71a;">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="NITI Aayog Shahdol">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">3 MONTHS • SHAHDOL</span>
+                            <h3>NITI AAYOG ANALYTICS</h3>
+                            <p>Socio-economic district governance KPI modeling in Shahdol.</p>
+                        </div>
+                    </div>
+
+                    <div onclick="window.openProofModal('springer')" class="gabor-square-card" style="background:#00994d;">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80" alt="Diffusion Floor Layouts">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">SPRINGER 2025 • BEST PAPER</span>
+                            <h3>DIFFUSION FLOOR LAYOUTS</h3>
+                            <p>Synthetic house floor layout generation awarded at NICEDT 2025.</p>
+                        </div>
+                    </div>
+
+                    <div onclick="window.openProofModal('springer')" class="gabor-square-card" style="background:#f4b4aa;">
+                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=700&q=80" alt="GenAI Resume & Audio DL">
+                        <div class="gabor-square-overlay">
+                            <span class="tag-pill">6 CITATIONS • SPRINGER</span>
+                            <h3>RNN RESUME & AUDIO DL</h3>
+                            <p>Generative AI Resume Summarization (Guwahati) & Audio CNNs.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 3: GITHUB INTERACTIONS & HEATMAP ==================== -->
+        <section class="slide-panel" data-slide-index="3" data-slide-title="04 / GitHub Activity">
+            <div class="slide-inner">
+                <div class="gabor-section-title">
+                    <h2>GITHUB TELEMETRY</h2>
+                    <p>50+ Repositories • 500+ Commits • Language Radar (@chandanXP)</p>
+                </div>
+
+                <!-- Exact Replica of the Uploaded GitHub Heatmap & Radar Image -->
+                <div class="github-dashboard-wrapper">
+                    
+                    <!-- Top Contribution Heatmap Card -->
+                    <div class="gh-heatmap-card">
+                        <div class="gh-section-label">
+                            <span>❖ CONTRIBUTION HEATMAP • LAST 12 MONTHS</span>
+                        </div>
+
+                        <div class="gh-months-row">
+                            <span></span>
+                            <span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span>
+                        </div>
+
+                        <div class="gh-heatmap-body">
+                            <div class="gh-days-col">
+                                <span>Mon</span>
+                                <span>Wed</span>
+                                <span>Fri</span>
+                            </div>
+                            <div class="gh-grid-matrix" id="ghHeatmapGrid"></div>
+                        </div>
+
+                        <div class="gh-legend-row">
+                            <span>Less</span>
+                            <span class="gh-cell"></span>
+                            <span class="gh-cell lvl-1"></span>
+                            <span class="gh-cell lvl-2"></span>
+                            <span class="gh-cell lvl-3"></span>
+                            <span class="gh-cell lvl-4"></span>
+                            <span>More</span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Row: Language Radar + 4 Bento Stat Cards -->
+                    <div class="gh-bottom-bento">
+                        <div class="gh-radar-card">
+                            <div class="gh-section-label" style="align-self: flex-start; margin-bottom: 8px;">
+                                <span>❖ LANGUAGE RADAR</span>
+                            </div>
+                            <svg viewBox="0 0 260 230" width="100%" height="215" style="overflow: visible;">
+                                <polygon points="130,30 215,92 182,190 78,190 45,92" fill="none" stroke="rgba(167, 139, 250, 0.18)" stroke-width="1"/>
+                                <polygon points="130,55 194,101 169,175 91,175 66,101" fill="none" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+                                <polygon points="130,80 172,110 156,160 104,160 88,110" fill="none" stroke="rgba(167, 139, 250, 0.12)" stroke-width="1"/>
+                                <polygon points="130,105 151,120 143,145 117,145 109,120" fill="none" stroke="rgba(167, 139, 250, 0.1)" stroke-width="1"/>
+                                
+                                <line x1="130" y1="130" x2="130" y2="30" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+                                <line x1="130" y1="130" x2="215" y2="92" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+                                <line x1="130" y1="130" x2="182" y2="190" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+                                <line x1="130" y1="130" x2="78" y2="190" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+                                <line x1="130" y1="130" x2="45" y2="92" stroke="rgba(167, 139, 250, 0.15)" stroke-width="1"/>
+
+                                <polygon points="130,42 184,106 152,156 112,150 105,118" fill="rgba(168, 85, 247, 0.28)" stroke="#c084fc" stroke-width="2.2"/>
+                                
+                                <circle cx="130" cy="42" r="4" fill="#e9d5ff" />
+                                <circle cx="184" cy="106" r="4" fill="#e9d5ff" />
+                                <circle cx="152" cy="156" r="4" fill="#e9d5ff" />
+                                <circle cx="112" cy="150" r="4" fill="#e9d5ff" />
+                                <circle cx="105" cy="118" r="4" fill="#e9d5ff" />
+
+                                <text x="130" y="14" text-anchor="middle" fill="#e9d5ff" font-size="9.5" font-family="Fira Code" font-weight="600">Python</text>
+                                <text x="130" y="25" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="Fira Code">40%</text>
+
+                                <text x="235" y="92" text-anchor="middle" fill="#e9d5ff" font-size="9.5" font-family="Fira Code" font-weight="600">JavaScript</text>
+                                <text x="235" y="103" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="Fira Code">25%</text>
+
+                                <text x="195" y="208" text-anchor="middle" fill="#e9d5ff" font-size="9.5" font-family="Fira Code" font-weight="600">TypeScript</text>
+                                <text x="195" y="219" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="Fira Code">15%</text>
+
+                                <text x="65" y="208" text-anchor="middle" fill="#e9d5ff" font-size="9.5" font-family="Fira Code" font-weight="600">Django</text>
+                                <text x="65" y="219" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="Fira Code">10%</text>
+
+                                <text x="24" y="92" text-anchor="middle" fill="#e9d5ff" font-size="9.5" font-family="Fira Code" font-weight="600">C/DevOps</text>
+                                <text x="24" y="103" text-anchor="middle" fill="#a78bfa" font-size="8.5" font-family="Fira Code">10%</text>
+                            </svg>
+                        </div>
+
+                        <div class="gh-metrics-2x2">
+                            <div class="gh-stat-card">
+                                <div class="gh-stat-icon-box"><i class="fas fa-cube"></i></div>
+                                <div><h3>50+</h3><span>REPOSITORIES</span></div>
+                            </div>
+                            <div class="gh-stat-card">
+                                <div class="gh-stat-icon-box" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.35); background: rgba(56, 189, 248, 0.1);"><i class="fas fa-bolt"></i></div>
+                                <div><h3>500+</h3><span>TOTAL COMMITS</span></div>
+                            </div>
+                            <div class="gh-stat-card">
+                                <div class="gh-stat-icon-box" style="color: #facc15; border-color: rgba(250, 204, 21, 0.35); background: rgba(250, 204, 21, 0.1);"><i class="far fa-star"></i></div>
+                                <div><h3>25+</h3><span>STARS EARNED</span></div>
+                            </div>
+                            <div class="gh-stat-card">
+                                <div class="gh-stat-icon-box" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.35); background: rgba(74, 222, 128, 0.1);"><i class="fas fa-arrows-rotate"></i></div>
+                                <div><h3>30+</h3><span>PULL REQUESTS</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 4: VECTOR SKILLS & SHARED RECOGNITION ==================== -->
+        <section class="slide-panel" data-slide-index="4" data-slide-title="05 / Skills & Awards">
+            <div class="slide-inner">
+                <div class="gabor-section-title">
+                    <h2 class="dev-only">DEVELOPER ARSENAL</h2>
+                    <h2 class="ds-only">DATA SCIENCE ARSENAL</h2>
+                    <p>Production technologies, cloud infrastructure, and national awards</p>
+                </div>
+
+                <!-- Developer Vector Icons Grid -->
+                <div class="skills-vector-grid dev-only">
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <span>React & Redux</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <span>Node.js & Express</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core">
+                        <span>ASP.NET Core</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server">
+                        <span>SQL Server & SSRS</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins">
+                        <span>Jenkins CI/CD</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                        <span>Docker & Git</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+                        <span>AWS Cloud</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu">
+                        <span>Ubuntu Server</span>
+                    </div>
+                </div>
+
+                <!-- Data Science Vector Icons Grid -->
+                <div class="skills-vector-grid ds-only">
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>Python (DS/ML)</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+                        <span>PyTorch & Diffusion</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                        <span>TensorFlow & CNNs</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV">
+                        <span>YOLOv8 & OpenCV</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+                        <span>Pandas & NumPy</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-Learn">
+                        <span>Scikit-Learn & NLTK</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                        <span>Django AI APIs</span>
+                    </div>
+                    <div class="skill-vector-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter">
+                        <span>Jupyter & Streamlit</span>
+                    </div>
+                </div>
+
+                <div class="gabor-section-title" style="margin-top: 20px;">
+                    <h2>HONORS & AWARDS</h2>
+                    <p>National hackathons & peer-reviewed Springer publications</p>
+                </div>
+
+                <div class="gabor-news-grid">
+                    <div class="gabor-news-card lime" onclick="window.openProofModal('paranox')">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="Paranox">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag" style="color:#18181b;">PARANOX 2.0</span>
+                            <span class="news-bottom-title">2ND RUNNER UP (TOP 3 OF 1,552)</span>
+                        </div>
+                    </div>
+
+                    <div class="gabor-news-card pink" onclick="window.openProofModal('nicedt')">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="NICEDT">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">NICEDT 2025</span>
+                            <span class="news-bottom-title">BEST AI/ML PROJECT & PAPER</span>
+                        </div>
+                    </div>
+
+                    <div class="gabor-news-card orange" onclick="window.openProofModal('springer')">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="Springer">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">SPRINGER AUTHOR</span>
+                            <span class="news-bottom-title">4+ PAPERS • 6 CITATIONS</span>
+                        </div>
+                    </div>
+
+                    <div class="gabor-news-card teal" onclick="window.openProofModal('govt_ai')">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="IndiaAI">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">GOVT INITIATIVES</span>
+                            <span class="news-bottom-title">INDIAAI & NITI AAYOG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 5: BLOG, MUSIC & COMMUNITY WALL ==================== -->
+        <section class="slide-panel" data-slide-index="5" data-slide-title="06 / Blog & Wall">
+            <div class="slide-inner">
+                <div class="gabor-section-title">
+                    <h2>STUDIO WALL & VIBE</h2>
+                    <p>Articles, original DHH releases on Spotify, and live visitor notes</p>
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 14px;">
+                        <button id="createPostBtn" class="btn">+ New Blog Post</button>
+                        <a href="music.html" class="btn btn-outline"><i class="fab fa-spotify" style="color:#16a34a;"></i> Original Music</a>
+                    </div>
+                </div>
+
+                <div id="blog-feed" class="blog-grid" style="margin-bottom: 32px;">
+                    <div style="color:var(--text-muted); text-align:center;">Loading posts...</div>
+                </div>
+
+                <h3 style="font-size: 1.8rem; margin-bottom: 14px; text-align:center;">RECENTLY PLAYED ON SPOTIFY</h3>
+                <div class="spotify-grid" id="spotifyTracks" style="margin-bottom: 36px;"></div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start;">
+                    <div style="background: #f4f4f5; padding: 22px; border-radius: 24px;">
+                        <h4 style="font-size: 1.4rem; margin-bottom: 6px;">LEAVE A LIVE NOTE</h4>
+                        <p style="font-size: 0.82rem; margin-bottom: 12px;">Appears here and as a draggable note on the sidebar photo.</p>
+                        <input type="text" id="msgName" placeholder="Your Name (Optional)" maxlength="30" style="background:#fff;">
+                        <textarea id="msgText" placeholder="Write a message..." maxlength="280" style="min-height: 80px; background:#fff;"></textarea>
+                        <button id="postMsgBtn" class="btn" style="width: 100%;">Post Message</button>
+                    </div>
+                    <div class="messages-grid" id="messagesGrid" style="margin-top: 0;">
+                        <div style="color:var(--text-muted);">Loading messages...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SLIDE 6: SPENCER GABOR "NEWS" CARDS + MASSIVE "CONTACT" BLOCK (IMAGES 5, 6, 8) ==================== -->
+        <section class="slide-panel" data-slide-index="6" data-slide-title="07 / News & Contact">
+            <div class="slide-inner">
+                
+                <!-- SPENCER GABOR "NEWS" 4 VIBRANT HORIZONTAL CARDS (IMAGE 8) -->
+                <div class="gabor-section-title">
+                    <h2>NEWS & SOCIALS</h2>
+                    <p>Recent updates, releases, and social handles</p>
+                </div>
+
+                <div class="gabor-news-grid">
+                    <!-- 1. Neon Lime Card (LinkedIn) -->
+                    <a href="https://linkedin.com/in/chandan-saroj" target="_blank" rel="noopener" class="gabor-news-card lime">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="LinkedIn">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag" style="color:#18181b;">LINKEDIN</span>
+                            <span class="news-bottom-title">JOINED HYI.AI AS DS SPECIALIST</span>
+                        </div>
+                    </a>
+
+                    <!-- 2. Pastel Pink Card (GitHub) -->
+                    <a href="https://github.com/chandanXP" target="_blank" rel="noopener" class="gabor-news-card pink">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="GitHub">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">GITHUB @CHANDANXP</span>
+                            <span class="news-bottom-title">50+ REPOS & 500+ COMMITS</span>
+                        </div>
+                    </a>
+
+                    <!-- 3. Bright Orange Card (YouTube & Instagram) -->
+                    <a href="https://www.youtube.com/@SarojXCI" target="_blank" rel="noopener" class="gabor-news-card orange">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="YouTube">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">YOUTUBE & IG</span>
+                            <span class="news-bottom-title">@SAROJXCI CREATOR HUB</span>
+                        </div>
+                    </a>
+
+                    <!-- 4. Deep Teal Card (Spotify Original Music) -->
+                    <a href="music.html" class="gabor-news-card teal">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=400&q=80" class="gabor-news-thumb" alt="Spotify">
+                        <div class="gabor-news-info">
+                            <span class="news-top-tag">SPOTIFY ARTIST</span>
+                            <span class="news-bottom-title">NEW RELEASE: SAWWAL HEE NAHI</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Quick Direct Message Form -->
+                <div class="contact-split-box" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; background: #f4f4f5; border-radius: 26px; padding: 28px; margin-bottom: 28px;">
+                    <div>
+                        <h3 style="font-size: 1.8rem;">DIRECT MESSAGE</h3>
+                        <p style="margin-top: 8px;">Available for Senior Data Science / AI Specialist initiatives, enterprise MERN/.NET consulting, and technical training programs.</p>
+                        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; font-weight: 700;">
+                            <div><i class="fas fa-envelope" style="width:22px;"></i> imjunior471@gmail.com</div>
+                            <div><i class="fas fa-phone" style="width:22px;"></i> +91 9315632708</div>
+                            <div><i class="fas fa-location-dot" style="width:22px;"></i> Bengaluru / Delhi / Chandigarh, India</div>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <input type="text" name="name" placeholder="Your Name" required style="background:#fff;" />
+                            <input type="email" name="email" placeholder="Your Email" required style="background:#fff;" />
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject (Data Science / Full-Stack / Training)" required style="background:#fff;" />
+                        <textarea name="message" placeholder="How can we collaborate?" style="min-height: 90px; background:#fff;" required></textarea>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message via WhatsApp</button>
+                    </form>
+                </div>
+
+                <!-- SPENCER GABOR MASSIVE EDGE-TO-EDGE "CONTACT" BLOCK (IMAGES 5 & 6) -->
+                <div class="gabor-contact-monolith">
+                    <span class="gabor-contact-giant-word">CONTACT</span>
+                    <div class="gabor-contact-links-stack">
+                        <a href="mailto:imjunior471@gmail.com">IMJUNIOR471@GMAIL.COM</a>
+                        <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 2px;">
+                            <a href="https://linkedin.com/in/chandan-saroj" target="_blank" rel="noopener">LINKEDIN</a>
+                            <a href="https://github.com/chandanXP" target="_blank" rel="noopener">GITHUB</a>
+                            <a href="https://instagram.com/sarojxci" target="_blank" rel="noopener">INSTAGRAM</a>
+                            <a href="https://www.youtube.com/@SarojXCI" target="_blank" rel="noopener">YOUTUBE</a>
+                            <a href="music.html">SPOTIFY</a>
+                        </div>
+                    </div>
+                    <div class="gabor-copyright-white">
+                        ALL RIGHTS RESERVED 2026 ROHIT NAYAK
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Practical Verification / Proof Modal -->
+    <div class="modal" id="proofModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeProofModal">&times;</span>
+            <div id="proofModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Read Blog Post Modal -->
+    <div class="modal" id="readPostModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeReadModal">&times;</span>
+            <div id="readModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Create Blog Post Modal -->
+    <div class="modal" id="blogModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeBlogModal">&times;</span>
+            <h3 style="margin-bottom: 1rem;">Create New Blog Post</h3>
+            <input type="text" id="blogTitle" placeholder="Main Heading" required />
+            <input type="text" id="blogSubtitle" placeholder="Sub Heading (Optional)" />
+            <input type="text" id="blogImage" placeholder="Image URL (Optional)" />
+            <div id="editor-container" style="height: 180px; margin-bottom: 1rem;"></div>
+            <input type="password" id="blogPassword" placeholder="Admin Password" required />
+            <button id="submitPostBtn" class="btn" style="width: 100%;">Publish Post</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        import { getFirestore, doc, setDoc, getDoc, addDoc, updateDoc, collection, onSnapshot, serverTimestamp, runTransaction, increment } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDnSz2NJQZovT3WKjyak9IcVlfYbQBmlVM",
+            authDomain: "chandan-saroj-portfolio.firebaseapp.com",
+            projectId: "chandan-saroj-portfolio",
+            storageBucket: "chandan-saroj-portfolio.firebasestorage.app",
+            messagingSenderId: "673240575610",
+            appId: "1:673240575610:web:c199ae38e28a41c33715c3",
+            measurementId: "G-WVQXG2QM1T"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        function showToast(message) {
+            const toast = document.getElementById('toastNotification');
+            const msgEl = document.getElementById('toastMessage');
+            if (!toast || !msgEl) return;
+            msgEl.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+        }
+
+        // --- DIRECTIONAL & SMOOTH GSAP 30% / 70% SPLIT-STAGE ENGINE ---
+        let currentSlide = 0;
+        let previousSlide = 1;
+        let hasSwitchedOnce = false;
+        let lastDirection = 'forward'; // 'forward' -> 30% on Right; 'backward' -> 30% on Left
+        const deckViewport = document.getElementById('deckViewport');
+        const slides = document.querySelectorAll('.slide-panel');
+        const totalSlides = slides.length;
+
+        // Inject a sleek sticky header indicator inside every slide for when it sits in the 30% dock
+        slides.forEach((panel, idx) => {
+            const title = panel.getAttribute('data-slide-title') || `0${idx + 1}`;
+            const indicator = document.createElement('div');
+            indicator.className = 'prev-pane-indicator';
+            indicator.innerHTML = `
+                <span class="prev-indicator-label"><i class="fas fa-columns" style="color:var(--accent);"></i> Context (30%): <strong>${title}</strong></span>
+                <span style="color:var(--accent); font-weight:700;">Expand 70% ↗</span>
+            `;
+            panel.insertBefore(indicator, panel.firstChild);
+
+            // Clicking the 30% shrunk pane promotes it back to 70% with consistent directional flow
+            panel.addEventListener('click', (e) => {
+                if (panel.classList.contains('prev-slide')) {
+                    if (e.target.closest('a, button, input, textarea')) return;
+                    window.goToSlide(idx);
+                }
+            });
+        });
+
+        // Start in single-pane 100% until the user switches
+        deckViewport?.classList.add('single-pane-mode');
+
+        window.goToSlide = function(index, explicitDir = null) {
+            let dir = explicitDir;
+            if (index < 0) {
+                index = totalSlides - 1;
+                dir = 'backward';
+            } else if (index >= totalSlides) {
+                index = 0;
+                dir = 'forward';
+            }
+
+            if (index === currentSlide && hasSwitchedOnce) return;
+
+            if (index !== currentSlide) {
+                if (!dir) {
+                    dir = index > currentSlide ? 'forward' : 'backward';
+                }
+                lastDirection = dir;
+                previousSlide = currentSlide;
+                currentSlide = index;
+                hasSwitchedOnce = true;
+
+                deckViewport?.classList.remove('single-pane-mode', 'dir-forward', 'dir-backward');
+                deckViewport?.classList.add(dir === 'forward' ? 'dir-forward' : 'dir-backward');
+            }
+
+            slides.forEach((panel, idx) => {
+                panel.classList.remove('active-slide', 'prev-slide');
+                if (idx === currentSlide) {
+                    panel.classList.add('active-slide');
+                    panel.scrollTop = 0;
+                } else if (hasSwitchedOnce && idx === previousSlide) {
+                    panel.classList.add('prev-slide');
+                    panel.scrollTop = 0;
+                    const lbl = panel.querySelector('.prev-indicator-label');
+                    const title = panel.getAttribute('data-slide-title') || `0${idx + 1}`;
+                    if (lbl) {
+                        const sideText = lastDirection === 'forward' ? '30% Right' : '30% Left';
+                        lbl.innerHTML = `<i class="fas fa-columns" style="color:var(--accent);"></i> ${sideText}: <strong>${title}</strong>`;
+                    }
+                }
+            });
+
+            // Smooth GSAP width & slide Choreography
+            if (typeof gsap !== 'undefined' && hasSwitchedOnce && window.innerWidth > 720) {
+                const activeEl = slides[currentSlide];
+                const prevEl = slides[previousSlide];
+
+                gsap.killTweensOf([activeEl, prevEl]);
+
+                gsap.fromTo(activeEl,
+                    {
+                        flexBasis: '42%',
+                        width: '42%',
+                        maxWidth: '42%',
+                        opacity: 0.55,
+                        x: lastDirection === 'forward' ? -24 : 24
+                    },
+                    {
+                        flexBasis: '70%',
+                        width: '70%',
+                        maxWidth: '70%',
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.58,
+                        ease: 'expo.out',
+                        clearProps: 'flexBasis,width,maxWidth,x'
+                    }
+                );
+
+                gsap.fromTo(prevEl,
+                    {
+                        flexBasis: '58%',
+                        width: '58%',
+                        maxWidth: '58%',
+                        opacity: 1,
+                        x: lastDirection === 'forward' ? -18 : 18
+                    },
+                    {
+                        flexBasis: '30%',
+                        width: '30%',
+                        maxWidth: '30%',
+                        opacity: 0.9,
+                        x: 0,
+                        duration: 0.58,
+                        ease: 'expo.out',
+                        clearProps: 'flexBasis,width,maxWidth,x'
+                    }
+                );
+            }
+
+            // Sync Gemini Sidebar Nav Buttons
+            document.querySelectorAll('.sidebar-nav-btn').forEach(btn => {
+                const sIdx = parseInt(btn.getAttribute('data-slide'), 10);
+                btn.classList.toggle('active', sIdx === currentSlide);
+                btn.classList.toggle('prev-context-nav', hasSwitchedOnce && sIdx === previousSlide);
+            });
+        };
+
+        document.getElementById('prevSlideBtn')?.addEventListener('click', () => window.goToSlide(currentSlide - 1, 'backward'));
+        document.getElementById('nextSlideBtn')?.addEventListener('click', () => window.goToSlide(currentSlide + 1, 'forward'));
+
+        document.querySelectorAll('.sidebar-nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = parseInt(btn.getAttribute('data-slide'), 10);
+                window.goToSlide(target);
+                document.body.classList.remove('mobile-drawer-open');
+            });
+        });
+
+        // Keyboard Left/Right Arrow support for slide deck
+        window.addEventListener('keydown', (e) => {
+            if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName) || document.activeElement?.isContentEditable) return;
+            if (e.key === 'ArrowRight') window.goToSlide(currentSlide + 1, 'forward');
+            if (e.key === 'ArrowLeft') window.goToSlide(currentSlide - 1, 'backward');
+        });
+
+        // --- GEMINI-STYLE PUSH SIDEBAR TOGGLE + MOBILE DRAWER ---
+        const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileSidebarBackdrop = document.getElementById('mobileSidebarBackdrop');
+
+        toggleSidebarBtn?.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                document.body.classList.toggle('mobile-drawer-open');
+            } else {
+                document.body.classList.toggle('sidebar-collapsed');
+            }
+        });
+
+        mobileMenuBtn?.addEventListener('click', () => {
+            document.body.classList.toggle('mobile-drawer-open');
+        });
+
+        mobileSidebarBackdrop?.addEventListener('click', () => {
+            document.body.classList.remove('mobile-drawer-open');
+        });
+
+        // --- SPENCER GABOR FLOATING BOTTOM-RIGHT PALETTE SWITCHER ---
+        const gaborPaletteWrap = document.getElementById('gaborPaletteWrap');
+        const gaborPaletteBtn = document.getElementById('gaborPaletteBtn');
+
+        gaborPaletteBtn?.addEventListener('click', () => {
+            gaborPaletteWrap?.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.palette-swatch').forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                document.querySelectorAll('.palette-swatch').forEach(s => s.classList.remove('active'));
+                swatch.classList.add('active');
+                const pal = swatch.getAttribute('data-palette');
+                if (pal === 'cream') {
+                    document.body.removeAttribute('data-palette');
+                } else {
+                    document.body.setAttribute('data-palette', pal);
+                }
+                gaborPaletteWrap?.classList.remove('open');
+            });
+        });
+
+        // --- SPENCER GABOR FEATURED WORK 3-CARD CAROUSEL ENGINE (IMAGE 2) ---
+        const featuredDeck = {
+            dev: [
+                {
+                    title: "SECURE QUESTION PAPER PLATFORM ↗",
+                    img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80",
+                    url: "https://github.com/chandanXP/NIELIT-Secure-Question-Paper-Platform"
+                },
+                {
+                    title: "SIMPLEBIT CRYPTO FINTECH ↗",
+                    img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=80",
+                    url: "https://app.simple-bit.com"
+                },
+                {
+                    title: "THE HIDOUT BOOKING ENGINE ↗",
+                    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+                    url: "https://dev.thehidout.com"
+                },
+                {
+                    title: "AKSUMBASE JENKINS CI/CD ↗",
+                    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+                    url: "https://aksumbase.com"
+                }
+            ],
+            ds: [
+                {
+                    title: "SMARTLANE AI (YOLOV8) ↗",
+                    img: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=900&q=80",
+                    url: "https://paranox-sourcecode.hf.space"
+                },
+                {
+                    title: "INDIAAI PROGRAM (MEITY) ↗",
+                    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=900&q=80",
+                    url: "https://github.com/chandanXP"
+                },
+                {
+                    title: "SPRINGER DIFFUSION FLOOR LAYOUTS ↗",
+                    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
+                    url: "https://github.com/chandanXP"
+                },
+                {
+                    title: "NITI AAYOG SHAHDOL ANALYTICS ↗",
+                    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+                    url: "https://linkedin.com/in/chandan-saroj"
+                }
+            ]
+        };
+        const featuredIdx = { dev: 0, ds: 0 };
+
+        window.cycleFeatured = function(track, delta) {
+            const list = featuredDeck[track];
+            featuredIdx[track] = (featuredIdx[track] + delta + list.length) % list.length;
+            const curr = featuredIdx[track];
+            const prev = (curr - 1 + list.length) % list.length;
+            const next = (curr + 1) % list.length;
+
+            const cImg = document.getElementById(`${track}CenterImg`);
+            const lImg = document.getElementById(`${track}WingLeftImg`);
+            const rImg = document.getElementById(`${track}WingRightImg`);
+            const pill = document.getElementById(`${track}CenterPill`);
+
+            if (cImg) cImg.src = list[curr].img;
+            if (lImg) lImg.src = list[prev].img;
+            if (rImg) rImg.src = list[next].img;
+            if (pill) pill.textContent = list[curr].title;
+        };
+
+        window.openFeaturedLink = function(track) {
+            const item = featuredDeck[track][featuredIdx[track]];
+            if (item?.url) window.open(item.url, '_blank');
+        };
+
+        // --- SPENCER GABOR HOVER IMAGE STACK ON SLIDE 02 (IMAGE 9) ---
+        document.querySelectorAll('.gabor-giant-hover-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelectorAll('.gabor-giant-hover-item').forEach(i => i.classList.remove('active-hover'));
+                item.classList.add('active-hover');
+                const lSrc = item.getAttribute('data-img-left');
+                const rSrc = item.getAttribute('data-img-right');
+                const lEl = document.getElementById('expFloatLeftImg');
+                const rEl = document.getElementById('expFloatRightImg');
+                if (lEl && lSrc) lEl.src = lSrc;
+                if (rEl && rSrc) rEl.src = rSrc;
+            });
+        });
+
+        // --- DUAL PROFESSION MODE SWITCHER (2.5+ YRS DEV VS 4+ YRS DATA SCIENCE) ---
+        let currentProfession = 'developer';
+        let activeExpFilter = 'mode';
+
+        function filterExperienceCards() {
+            document.querySelectorAll('#experienceTimeline .exp-visual-card').forEach(card => {
+                const track = card.getAttribute('data-track'); // 'dev', 'ds', 'both'
+                if (activeExpFilter === 'all' || track === 'both') {
+                    card.style.display = 'grid';
+                } else if (activeExpFilter === 'mode') {
+                    const targetTrack = currentProfession === 'developer' ? 'dev' : 'ds';
+                    card.style.display = (track === targetTrack) ? 'grid' : 'none';
+                } else {
+                    card.style.display = (track === activeExpFilter) ? 'grid' : 'none';
+                }
+            });
+        }
+
+        function setProfessionMode(mode, notify = true) {
+            currentProfession = mode;
+            document.body.setAttribute('data-profession', mode);
+
+            document.querySelectorAll('.mode-switch-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-target-mode') === mode);
+            });
+
+            filterExperienceCards();
+
+            if (notify) {
+                showToast(mode === 'developer'
+                    ? 'Developer Mode Active (2.5+ Years Exp)'
+                    : 'Data Science Specialist Mode Active (4+ Years Exp)');
+            }
+        }
+
+        document.querySelectorAll('.mode-switch-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setProfessionMode(btn.getAttribute('data-target-mode'));
+            });
+        });
+
+        document.querySelectorAll('.timeline-tab-btn').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.timeline-tab-btn').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeExpFilter = tab.getAttribute('data-filter');
+                filterExperienceCards();
+            });
+        });
+
+        // Initial filter call
+        filterExperienceCards();
+
+        // --- GENERATE GITHUB HEATMAP CELLS MATCHING SCREENSHOT PATTERN ---
+        function renderGitHubHeatmap() {
+            const grid = document.getElementById('ghHeatmapGrid');
+            if (!grid) return;
+            // Deterministic pattern resembling the user's screenshot
+            const pattern = [
+                0,0,0,1,0,0,2,0,0,0,1,3,0,2,0,1,0,0,2,3,1,0,0,4,2,0,1,2,0,3,1,0,2,1,0,0,
+                0,1,0,0,0,1,0,2,0,3,0,1,2,0,1,2,0,1,3,0,2,1,0,2,0,3,1,0,2,0,1,3,0,2,1,0,
+                0,0,3,3,0,0,1,0,2,0,1,0,0,2,3,0,1,0,2,4,2,1,3,0,2,1,3,2,0,1,2,0,1,0,0,0,
+                0,3,0,1,0,0,0,1,0,2,0,3,0,1,0,2,3,0,1,2,0,1,0,2,3,0,2,1,3,0,1,0,0,0,0,0,
+                3,0,0,1,0,0,4,0,2,0,0,0,1,2,3,0,0,2,0,1,0,2,0,1,3,2,0,1,0,0,0,0,0,0,0,0,
+                0,0,1,4,0,0,0,1,0,0,0,2,0,1,3,2,2,0,3,4,3,0,2,1,0,3,0,1,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,1,0,0,0,0,0,0,2,0,1,3,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+            ];
+            grid.innerHTML = pattern.map((lvl, idx) => {
+                const cls = lvl > 0 ? `gh-cell lvl-${lvl}` : 'gh-cell';
+                return `<div class="${cls}" title="${lvl * 3} contributions"></div>`;
+            }).join('');
+        }
+        renderGitHubHeatmap();
+
+        // --- PROOF / VERIFICATION MODALS ---
+        const proofRecords = {
+            paranox: {
+                title: "Paranox 2.0 National Hackathon — 2nd Runner Up",
+                subtitle: "Top 3 out of 1,552 Projects | 20,000+ Participants Nationwide",
+                details: `<p>Ranked Top 3 nationwide at Newton School of Technology for building <strong>SmartLane AI</strong> using YOLOv8 and Custom CNNs (99.2% emergency vehicle detection accuracy).</p>`,
+                links: [
+                    { label: "Live HuggingFace Space", url: "https://paranox-sourcecode.hf.space" },
+                    { label: "Colab Model Notebook", url: "https://colab.research.google.com/drive/1v-TD755AdnonZuIX0nXLbM2DvF281xiu?usp=sharing" }
+                ]
+            },
+            nicedt: {
+                title: "NICEDT 2025 & 2024 International Conferences",
+                subtitle: "Best Research Paper Awardee & Best AI/ML Project Award",
+                details: `<p>Awarded Best Research Paper at NICEDT 2025 for <em>Generating Synthetic House Floor Layout Images Using Diffusion Models</em>, and presented <em>Resume Summarization - An Application of Generative AI</em> at NICEDT-2024 in Guwahati, Assam (published by Springer).</p>`,
+                links: [{ label: "GitHub Research Profile", url: "https://github.com/chandanXP" }]
+            },
+            springer: {
+                title: "Springer Peer-Reviewed Publications (6 Citations)",
+                subtitle: "4+ International Conference & Journal Papers",
+                details: `<ol style="padding-left:18px; line-height:1.7;">
+                    <li><strong>Generating Synthetic Different House Floor Layout Images Using Diffusion Model</strong> (Springer, 2025)</li>
+                    <li><strong>Audio Classification Using Deep Learning</strong> (Springer, 2025)</li>
+                    <li><strong>Resume Summarization - An Application of Generative AI</strong> (Springer, 2024 — Guwahati, Assam)</li>
+                    <li><strong>Assessing Online Products Using NLTK Based Machine Learning Model</strong> (ICIAC, 2023)</li>
+                </ol>`,
+                links: [{ label: "Verify on GitHub", url: "https://github.com/chandanXP" }]
+            },
+            govt_ai: {
+                title: "IndiaAI Program (MeitY) — 1.5 Years Contribution",
+                subtitle: "National AI Initiative & Applied Deep Learning",
+                details: `<p>Contributed for 1.5 years to the IndiaAI program under MeitY alongside NIELIT Ropar & Chandigarh, developing Diffusion Models, Audio Classification networks, and conducting AI training for government officers.</p>`,
+                links: [{ label: "LinkedIn Profile", url: "https://linkedin.com/in/chandan-saroj" }]
+            },
+            piet_training: {
+                title: "AI & Data Science Summer Training @ PIET College",
+                subtitle: "Lead Trainer — Panipat Institute of Engineering & Technology",
+                details: `<p>Designed and delivered hands-on summer training covering Python, Pandas, Scikit-Learn, OpenCV, and YOLOv8 deployment.</p>`,
+                links: [{ label: "LinkedIn Verification", url: "https://linkedin.com/in/chandan-saroj" }]
+            },
+            niti_shahdol: {
+                title: "NITI Aayog Program — Shahdol (3 Months)",
+                subtitle: "Regional Data Analytics & Governance KPIs",
+                details: `<p>3-month field and data science engagement in Shahdol analyzing socio-economic and educational datasets for governance reporting.</p>`,
+                links: [{ label: "LinkedIn Verification", url: "https://linkedin.com/in/chandan-saroj" }]
+            },
+            secure_qp: {
+                title: "NIELIT Secure Question Paper Platform",
+                subtitle: "SHA-256 Cryptographic Security for 30,000+ Exam Files",
+                details: `<p>Engineered SHA-256 hashing inside Microsoft SQL Server with SSRS PDF generation so Database Administrators have zero plaintext exposure to exam papers.</p>`,
+                links: [{ label: "GitHub Repository", url: "https://github.com/chandanXP/NIELIT-Secure-Question-Paper-Platform" }]
+            }
+        };
+
+        const proofModal = document.getElementById('proofModal');
+        document.getElementById('closeProofModal').onclick = () => proofModal.style.display = 'none';
+
+        window.openProofModal = function(key) {
+            const rec = proofRecords[key];
+            if (!rec) return;
+            const linksHtml = (rec.links || []).map(l => `<a href="${l.url}" target="_blank" rel="noopener" class="btn" style="margin-right:8px; margin-top:10px;">${l.label} ↗</a>`).join('');
+            document.getElementById('proofModalBody').innerHTML = `
+                <h3 style="font-size:1.35rem; margin-bottom:4px;">${rec.title}</h3>
+                <p style="color:var(--accent); font-weight:600; font-size:0.86rem; margin-bottom:12px;">${rec.subtitle}</p>
+                <div style="font-size:0.92rem; color:var(--text-muted);">${rec.details}</div>
+                <div style="margin-top:14px; border-top:1px solid var(--border); padding-top:10px;">${linksHtml}</div>
+            `;
+            proofModal.style.display = 'flex';
+        };
+
+        // --- WEATHER LOGIC ---
+        const DELHI_COORDS = { lat: 28.6139, lon: 77.2090 };
+        async function fetchWeatherData(lat, lon) {
+            try {
+                const [wRes, aRes] = await Promise.all([
+                    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&timezone=auto`),
+                    fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=us_aqi&timezone=auto`)
+                ]);
+                if (!wRes.ok || !aRes.ok) return;
+                const w = await wRes.json();
+                const a = await aRes.json();
+                document.getElementById('weatherTemp').innerText = `${Math.round(w.current.temperature_2m)}°C`;
+                document.getElementById('weatherAQI').innerText = `AQI: ${a.current.us_aqi}`;
+                document.getElementById('weather-widget').style.display = 'inline-flex';
+            } catch (e) {}
+        }
+        fetchWeatherData(DELHI_COORDS.lat, DELHI_COORDS.lon);
+
+        // --- FIREBASE REALTIME LISTENERS ---
+        signInAnonymously(auth).catch(() => {});
+        let currentUser = null;
+        let loadedPosts = {};
+
+        function stripHtml(html) {
+            const tmp = document.createElement("DIV");
+            tmp.innerHTML = html;
+            return tmp.textContent || tmp.innerText || "";
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (!user) return;
+            currentUser = user;
+
+            // Messages & Hero Bubbles
+            onSnapshot(collection(db, "messages"), (snapshot) => {
+                const grid = document.getElementById('messagesGrid');
+                if (!grid) return;
+                grid.innerHTML = '';
+                let recent = [];
+                snapshot.forEach(d => recent.push(d.data()));
+                recent.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
+                recent.slice(0, 8).forEach(msg => {
+                    const card = document.createElement('div');
+                    card.className = 'message-card';
+                    card.innerHTML = `<strong style="color:var(--accent); font-size:0.8rem;">${msg.name || 'Anonymous'}</strong><p style="font-size:0.84rem; margin:4px 0;">${msg.text}</p>`;
+                    grid.appendChild(card);
+                });
+
+                const heroContainer = document.getElementById('heroMessages');
+                if (heroContainer) {
+                    heroContainer.innerHTML = '';
+                    if (typeof Draggable !== 'undefined') gsap.registerPlugin(Draggable);
+                    recent.slice(0, 3).forEach((msg, idx) => {
+                        const b = document.createElement('div');
+                        b.className = 'hero-msg-bubble';
+                        b.style.top = `${10 + idx * 28}%`;
+                        b.style.left = idx % 2 === 0 ? `5%` : `36%`;
+                        b.innerHTML = `<strong>${msg.name || 'Visitor'}</strong><p>${msg.text}</p>`;
+                        heroContainer.appendChild(b);
+                        if (typeof Draggable !== 'undefined') Draggable.create(b, { bounds: ".sidebar-photo-box" });
+                    });
+                }
+            });
+
+            // Blogs
+            onSnapshot(collection(db, "blogs"), (snapshot) => {
+                const blogGrid = document.getElementById('blog-feed');
+                if (!blogGrid) return;
+                blogGrid.innerHTML = '';
+                let posts = [];
+                loadedPosts = {};
+                snapshot.forEach(d => {
+                    const data = d.data();
+                    posts.push({ id: d.id, ...data });
+                    loadedPosts[d.id] = data;
+                });
+                posts.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
+                if (posts.length === 0) {
+                    blogGrid.innerHTML = '<div style="color:var(--text-muted);">No blog posts yet.</div>';
+                }
+                posts.slice(0, 6).forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'blog-card';
+                    card.innerHTML = `
+                        <div class="vote-section">
+                            <button class="vote-btn upvote" data-id="${post.id}"><i class="fas fa-chevron-up"></i></button>
+                            <span class="vote-count">${post.score || 0}</span>
+                            <button class="vote-btn downvote" data-id="${post.id}"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="blog-content" onclick="window.openReadPost('${post.id}')">
+                            <h3 class="blog-title">${post.title}</h3>
+                            <p style="font-size:0.82rem; margin:0;">${stripHtml(post.content).slice(0, 110)}...</p>
+                        </div>
+                    `;
+                    blogGrid.appendChild(card);
+                });
+
+                document.querySelectorAll('.vote-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        window.handleVote(btn.getAttribute('data-id'), btn.classList.contains('upvote'));
+                    });
+                });
+            });
+
+            // Likes & Views
+            onSnapshot(doc(db, "stats", "likes"), (d) => {
+                if (d.exists()) document.getElementById('likeCount').innerText = d.data().count || 0;
+            });
+            onSnapshot(doc(db, "stats", "global_views"), (d) => {
+                if (d.exists()) document.getElementById('globalViewCount').innerText = d.data().count || 0;
+            });
+            const todayStr = new Date().toISOString().split('T')[0];
+            onSnapshot(doc(db, "page_views", todayStr), (d) => {
+                if (d.exists()) document.getElementById('todayViewCount').innerText = d.data().views || 0;
+            });
+        });
+
+        window.handleVote = async function(postId, isUp) {
+            if (!currentUser) return;
+            await updateDoc(doc(db, "blogs", postId), { score: increment(isUp ? 1 : -1) }).catch(() => {});
+        };
+
+        const blogModal = document.getElementById('blogModal');
+        const readPostModal = document.getElementById('readPostModal');
+        document.getElementById('createPostBtn').onclick = () => blogModal.style.display = "flex";
+        document.getElementById('closeBlogModal').onclick = () => blogModal.style.display = "none";
+        document.getElementById('closeReadModal').onclick = () => readPostModal.style.display = "none";
+
+        window.openReadPost = function(postId) {
+            const post = loadedPosts[postId];
+            if (!post) return;
+            document.getElementById('readModalBody').innerHTML = `
+                <h2 style="margin-bottom:8px;">${post.title}</h2>
+                ${post.image ? `<img src="${post.image}" style="width:100%; max-height:260px; object-fit:cover; border-radius:8px; margin-bottom:12px;">` : ''}
+                <div style="line-height:1.7;">${post.content}</div>
+            `;
+            readPostModal.style.display = "flex";
+        };
+
+        const quill = new Quill('#editor-container', { theme: 'snow', placeholder: 'Write post content...' });
+
+        document.getElementById('submitPostBtn').addEventListener('click', async () => {
+            const title = document.getElementById('blogTitle').value;
+            const subtitle = document.getElementById('blogSubtitle').value;
+            const image = document.getElementById('blogImage').value;
+            const content = quill.root.innerHTML;
+            const password = document.getElementById('blogPassword').value;
+            if (!title || !quill.getText().trim()) { showToast("Title and content required"); return; }
+            if (password !== "220919") { showToast("Invalid Admin Password"); return; }
+            await addDoc(collection(db, "blogs"), { title, subtitle, image, content, score: 0, timestamp: serverTimestamp() });
+            blogModal.style.display = "none";
+            showToast("Blog published!");
+        });
+
+        document.getElementById('likeBtn').addEventListener('click', () => {
+            if (!currentUser) return;
+            const ref = doc(db, "stats", "likes");
+            runTransaction(db, async (t) => {
+                const d = await t.get(ref);
+                t.set(ref, { count: (d.exists() ? d.data().count : 0) + 1 });
+            }).catch(() => {});
+        });
+
+        document.getElementById('postMsgBtn').addEventListener('click', async () => {
+            if (!currentUser) return;
+            const text = document.getElementById('msgText').value.trim();
+            const name = document.getElementById('msgName').value.trim();
+            if (!text) { showToast("Enter a message first"); return; }
+            await addDoc(collection(db, "messages"), { name: name || "Anonymous", text, timestamp: serverTimestamp() });
+            document.getElementById('msgText').value = '';
+            showToast("Message added!");
+        });
+
+        document.getElementById("contactForm")?.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const name = this.querySelector('[name="name"]').value;
+            const subject = this.querySelector('[name="subject"]').value;
+            const message = this.querySelector('[name="message"]').value;
+            window.open(`https://wa.me/919315632708?text=Hi Rohit, I am ${name} (${subject}). ${message}`, '_blank');
+        });
+
+        const spotifyTracks = [
+            { title: "Dreaming", artist: "Metro Boomin, A$AP Rocky", art: "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd" },
+            { title: "Starboy", artist: "The Weeknd, Daft Punk", art: "https://i.scdn.co/image/ab67616d0000b2734718e28d244851e9e87d1920" },
+            { title: "FE!N", artist: "Travis Scott", art: "https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44" },
+            { title: "Popular", artist: "The Weeknd", art: "https://i.scdn.co/image/ab67616d0000b273b5f9e28219c169fd4b9e8379" }
+        ];
+        const spContainer = document.getElementById('spotifyTracks');
+        if (spContainer) {
+            spContainer.innerHTML = spotifyTracks.map(t => `
+                <div class="spotify-card">
+                    <img src="${t.art}" class="track-art" alt="${t.title}">
+                    <div>
+                        <span class="track-name">${t.title}</span>
+                        <span class="track-artist">${t.artist}</span>
+                    </div>
+                    <i class="fab fa-spotify" style="margin-left:auto; color:#1DB954;"></i>
+                </div>
+            `).join('');
+        }
+    </script>
+
+<script>
+/* Profile photo picker: updates both profile pictures and remembers the choice */
+(() => {
+    const input = document.getElementById('profilePhotoInput');
+    const button = document.getElementById('chooseProfilePhoto');
+    if (!input || !button) return;
+
+    const photoImages = () => document.querySelectorAll(
+        '.profile-photo, .gabor-floating-avatar img'
+    );
+
+    function applyPhoto(src) {
+        photoImages().forEach(img => {
+            img.src = src;
+            img.alt = 'Rohit Nayak Profile Photo';
+        });
+    }
+
+    try {
+        const savedPhoto = localStorage.getItem('rohitNayakProfilePhoto');
+        if (savedPhoto) applyPhoto(savedPhoto);
+    } catch (e) {}
+
+    button.addEventListener('click', () => input.click());
+    input.addEventListener('change', () => {
+        const file = input.files && input.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+            alert('कृपया JPG, PNG या WEBP फोटो चुनें।');
+            input.value = '';
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = event => {
+            const image = new Image();
+            image.onload = () => {
+                const canvas = document.createElement('canvas');
+                const maxSize = 600;
+                const scale = Math.min(1, maxSize / Math.max(image.width, image.height));
+                canvas.width = Math.round(image.width * scale);
+                canvas.height = Math.round(image.height * scale);
+                canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+                const compressedPhoto = canvas.toDataURL('image/jpeg', 0.82);
+                applyPhoto(compressedPhoto);
+                try {
+                    localStorage.setItem('rohitNayakProfilePhoto', compressedPhoto);
+                    alert('आपकी फोटो वेबसाइट में लग गई है!');
+                } catch (e) {
+                    alert('फोटो लग गई, लेकिन ब्राउज़र में सेव नहीं हो पाई।');
+                }
+            };
+            image.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+})();
+</script>
+\n</body>
+</html>
